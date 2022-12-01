@@ -2,9 +2,8 @@ import React from "react";
 import "./Register.scss";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
-// import { newUser } from "../redux/auth/auth.actions";
+import { newUser } from "../../redux/auth/auth.actions";
 // import ReusableButton from "../components/ReusableButton";
-// import { API } from "../shared/services/api";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
@@ -18,14 +17,14 @@ const Register = () => {
   const dispatch = useDispatch();
 
   const registerUser = async (formdata) => {
-    // dispatch(newUser(formdata, navigate));
+    dispatch(newUser(formdata, navigate));
   };
 
   return (
-    <form className= "registerForm" onSubmit={handleSubmit(registerUser)}>
+    <form className="registerForm" onSubmit={handleSubmit(registerUser)}>
       <label>
         User name
-        <input type="text" {...register("userName", { required: true })} />
+        <input type="text" {...register("name", { required: true })} />
       </label>
       <label>
         Email
@@ -66,11 +65,7 @@ const Register = () => {
       </label>
       {errors.password ? <p>El password no es correcto</p> : null}
 
-      {/* <ReusableButton
-        size="l"
-        text="ENVIAR"
-        disabled={!isValid}
-      ></ReusableButton> */}
+      <button disabled={!isValid}>Enviar</button>
     </form>
   );
 };

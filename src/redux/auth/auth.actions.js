@@ -3,7 +3,8 @@ import { API } from "../../shared/services/api";
 export const newUser = (formdata, navigate) => async (dispatch) => {
   dispatch({ type: "register_user_start" });
   try {
-    const result = await API.post("users/register", formdata);
+    console.log("Por encima de la ruta a la API")
+    const result = await API.post("users/create", formdata);
     dispatch({ type: "register_user_ok" });
     console.log(result);
     navigate("/login");
@@ -26,14 +27,14 @@ export const loginUser = (formdata, navigate) => async (dispatch) => {
 };
 
 export const checkSession = (token, navigate) => async (dispatch) => {
-  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL DISPATCH");
+  // console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL DISPATCH");
   dispatch({ type: "checkSession_start" });
-  console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL TRY");
+  // console.log("ESTOY EN LA FUNCION CHECKSESSION POR ENCIMA DEL TRY");
   try {
-    console.log("ESTOY DENTRO DEL TRY");
+    // console.log("ESTOY DENTRO DEL TRY");
 
     const result = await API.post("users/checksession");
-    console.log("SACANDO RESULT", result);
+    // console.log("SACANDO RESULT", result);
     dispatch({
       type: "checkSession_ok",
       payload: { user: result.data, token: token },
