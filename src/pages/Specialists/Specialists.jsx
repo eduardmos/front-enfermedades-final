@@ -1,14 +1,16 @@
 import React, { useEffect } from "react";
-import "./Centers.scss";
+import "./Specialists.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { getCenters } from "../../redux/centers/centers.functions";
+import { getSpecialists } from "../../redux/specialists/specialists.functions";
 
-const Centers = () => {
+const Specialists = () => {
   const dispatch = useDispatch();
-  const { centers, isLoading, error } = useSelector((state) => state.centers);
+  const { specialists, isLoading, error } = useSelector(
+    (state) => state.specialists
+  );
 
   useEffect(() => {
-    dispatch(getCenters());
+    dispatch(getSpecialists());
   }, []);
 
   return (
@@ -19,10 +21,10 @@ const Centers = () => {
           alt="loading"
         />
       ) : !error ? (
-        centers.map((center) => {
+        specialists.map((specialist) => {
           return (
             <div>
-              <h1>{center.name}</h1>
+              <h1>{specialist.name}</h1>
             </div>
           );
         })
@@ -35,4 +37,4 @@ const Centers = () => {
   );
 };
 
-export default Centers;
+export default Specialists;
