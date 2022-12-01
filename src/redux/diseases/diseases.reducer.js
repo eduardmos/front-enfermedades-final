@@ -15,7 +15,7 @@ const diseasesReducer = (state = INITIAL_STATE, action) => {
     case "getDiseases":
       return {
         ...state,
-        isLoading: true,
+        isLoading: false,
         diseases: action.payload,
         error: false,
       };
