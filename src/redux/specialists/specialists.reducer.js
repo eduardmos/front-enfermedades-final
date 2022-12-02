@@ -48,7 +48,66 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         specialists: [...mySpecialits],
         error: action.payload,
       };
-
+      case "puttingSpecialits":
+      return {
+        ...state,
+        isLoading: true,
+        error: false,
+      };
+    case "putSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        error: false,
+        specialists: [...mySpecialits, action.payload],
+      };
+    case "errorPutSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        specialists: [...mySpecialits],
+        error: action.payload,
+      };
+      case "gettingByIdSpecialits":
+      return {
+        ...state,
+        isLoading: true,
+        error: false,
+      };
+    case "getByIdSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        error: false,
+        specialists: [...mySpecialits, action.payload],
+      };
+    case "errorGetByIdSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        specialists: [...mySpecialits],
+        error: action.payload,
+      };
+      case "delettingSpecialits":
+      return {
+        ...state,
+        isLoading: true,
+        error: false,
+      };
+    case "deleteSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        error: false,
+        specialists: [...mySpecialits, action.payload],
+      };
+    case "errorDeleteSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        specialists: [...mySpecialits],
+        error: action.payload,
+      };
     default:
       return state;
   }

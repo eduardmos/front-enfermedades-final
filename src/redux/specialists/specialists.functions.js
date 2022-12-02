@@ -21,4 +21,20 @@ export const postSpecialists = (datos, navigate) => async (dispatch) => {
   } catch (error) {
     dispatch({ type: "errorSpecialists", payload: error.message });
   }
+  
+};
+
+export const putSpecialists = (datos, navigate, id) => async (dispatch) => {
+  dispatch({ type: "puttingSpecialists" });
+
+  try {
+
+    await API2.put(`specialists/edit/${id}`, datos);
+    const userUpdate = await API.get (`specialists/${id}`);
+    dispatch({ type: "putSpecialists", payload: userUpdate.data });
+    navigate("/specialists");
+  } catch (error) {
+    dispatch({ type: "errorSpecialists", payload: error.message });
+  }
+  
 };

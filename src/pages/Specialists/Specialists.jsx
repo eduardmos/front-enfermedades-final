@@ -3,7 +3,7 @@ import "./Specialists.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getSpecialists } from "../../redux/specialists/specialists.functions";
 import { SpecialistsCreate } from "../SpecialistsCreate/SpecialistsCreate";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Specialists = () => {
   const dispatch = useDispatch();
@@ -30,6 +30,7 @@ const Specialists = () => {
           return (
             <div>
               <h1>{specialist.name}</h1>
+              <Link to={`/specialists/${specialist._id}`}>Modificar</Link>
             </div>
           );
         })
