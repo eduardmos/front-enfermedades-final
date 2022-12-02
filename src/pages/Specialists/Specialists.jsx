@@ -10,6 +10,10 @@ const Specialists = () => {
     (state) => state.specialists
   );
 
+  // const watchMore = (id) => {
+  //   dispatch(getByIdSpecialists(id));
+  // };
+
   useEffect(() => {
     dispatch(getSpecialists());
   }, []);
@@ -29,6 +33,10 @@ const Specialists = () => {
           return (
             <div key={specialist._id}>
               <h1>{specialist.name}</h1>
+              {/* <button onClick={() => watchMore(specialist._id)}>
+                Detalles
+              </button> */}
+
               <Link to={`/specialists/${specialist._id}`} key={specialist._id}>
                 Ver Mas
               </Link>

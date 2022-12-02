@@ -1,20 +1,29 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import { getByIdSpecialists } from "../../redux/specialists/specialists.functions";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  deleteSpecialists,
+  getByIdSpecialists,
+} from "../../redux/specialists/specialists.functions";
 import "./SpecialistsDetails.scss";
 
 const SpecialistsDetails = () => {
   const { id } = useParams();
   // console.log(id);
+  let navigate = useNavigate();
   const dispatch = useDispatch();
+
   const { specialists, isLoading, error } = useSelector(
     (state) => state.specialists
   );
 
+  const deleteSpecialist = (id) => {
+    dispatch(deleteSpecialists(id, navigate));
+  };
+
   useEffect(() => {
     dispatch(getByIdSpecialists(id));
-    console.log("Datos recogidos por id", specialists);
+    // console.log("Datos recogidos por id", specialists);
   }, []);
 
   return (
@@ -34,6 +43,10 @@ const SpecialistsDetails = () => {
               <p>{specialist.specialistType}</p>
               <p>{specialist.location}</p>
               <p>{specialist.schedule}</p>
+
+              <button onClick={() => deleteSpecialist(specialist._id)}>
+                Eliminar
+              </button>
             </div>
           );
         })

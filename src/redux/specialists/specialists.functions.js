@@ -19,7 +19,7 @@ export const getByIdSpecialists = (id) => async (dispatch) => {
   try {
     // const result = await API.get(`/specialists`);
     const getById = await API.get(`/specialists/${id}`);
-    console.log(getById.data);
+    // console.log(getById.data);
     dispatch({ type: "getByIdSpecialists", payload: getById.data });
   } catch (error) {
     dispatch({ type: "errorGetByIdSpecialists", payload: error.message });
@@ -40,12 +40,12 @@ export const postSpecialists = (datos, navigate) => async (dispatch) => {
 };
 
 //Modificar un especialista
-export const putSpecialists = (datos, navigate, id) => async (dispatch) => {
+export const putSpecialists = (data, navigate, id) => async (dispatch) => {
   dispatch({ type: "puttingSpecialists" });
 
   try {
-    await API2.put(`specialists/edit/${id}`, datos);
-    const userUpdate = await API.get(`specialists/${id}`);
+    await API2.put(`specialists/edit/${id}`, data);
+    const userUpdate = await API.get(`specialists`);
     dispatch({ type: "putSpecialists", payload: userUpdate.data });
     navigate("/specialists");
   } catch (error) {
@@ -54,13 +54,13 @@ export const putSpecialists = (datos, navigate, id) => async (dispatch) => {
 };
 
 //Eliminar especialista
-export const deleteSpecialists = (datos, navigate, id) => async (dispatch) => {
+export const deleteSpecialists = (id, navigate) => async (dispatch) => {
   dispatch({ type: "delettingSpecialists" });
 
   try {
-    await API2.put(`specialists/delete/${id}`, datos);
-    const userUpdate = await API.get(`specialists/${id}`);
-    dispatch({ type: "deleteSpecialists", payload: userUpdate.data });
+    await API.delete(`specialists/delete/${id}`);
+    const newSpecialists = await API.get("/specialists");
+    dispatch({ type: "deleteSpecialists", payload: newSpecialists.data });
     navigate("/specialists");
   } catch (error) {
     dispatch({ type: "errorDeleteSpecialists", payload: error.message });

@@ -11,7 +11,7 @@ const SpecialistsCreate = () => {
   const dispatch = useDispatch();
 
   const createSpecialists = async (data) => {
-    console.log(data.img[0]);
+    // console.log(data.img[0]);
     const formData = new FormData();
     formData.append("name", data.name);
     formData.append("surname", data.surname);

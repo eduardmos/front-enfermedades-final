@@ -39,7 +39,7 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLoading: false,
         error: false,
-        specialists: [ action.payload],
+        specialists: [action.payload],
       };
     case "errorGetByIdSpecialists":
       return {
@@ -81,7 +81,7 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLoading: false,
         error: false,
-        specialists: [...mySpecialits, action.payload],
+        specialists: [...action.payload],
       };
     case "errorPutSpecialists":
       return {
@@ -102,7 +102,7 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLoading: false,
         error: false,
-        specialists: [...mySpecialits, action.payload],
+        specialists: [...action.payload],
       };
     case "errorDeleteSpecialists":
       return {
