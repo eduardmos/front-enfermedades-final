@@ -42,10 +42,11 @@ export const postSpecialists = (datos, navigate) => async (dispatch) => {
 //Modificar un especialista
 export const putSpecialists = (data, navigate, id) => async (dispatch) => {
   dispatch({ type: "puttingSpecialists" });
-
+  // console.log(id);
   try {
+    // console.log(data);
     await API2.put(`specialists/edit/${id}`, data);
-    const userUpdate = await API.get(`specialists`);
+    const userUpdate = await API2.get("specialists");
     dispatch({ type: "putSpecialists", payload: userUpdate.data });
     navigate("/specialists");
   } catch (error) {

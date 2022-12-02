@@ -5,7 +5,7 @@ import Diseases from "./pages/Diseases/Diseases";
 import Centers from "./pages/Centers/Centers";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
-import InfoCenters from "./pages/InfoCenters/InfoCenters";
+import InfoCenters from "./pages/CentersDetail/CentersDetail";
 import InfoDiseases from "./pages/InfoDiseases/InfoDiseases";
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs/AboutUs";
@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { checkSession } from "./redux/auth/auth.actions";
 import SpecialistsCreate from "./pages/SpecialistsCreate/SpecialistsCreate";
 import SpecialistsDetails from "./pages/SpecialistsDetails/SpecialistsDetails";
+import SpecialistsPut from "./pages/SpecialistsPut/SpecialistsPut";
 
 function App() {
   const dispatch = useDispatch();
@@ -34,6 +35,7 @@ function App() {
         <Route path="specialists" element={<Specialists />} />
         <Route path="specialists/:id" element={<SpecialistsDetails />} />
         <Route path="specialistsCreate" element={<SpecialistsCreate />} />
+        <Route path="specialistsPut/edit/:id" element={<SpecialistsPut />} />
         <Route path="centers/infoCenters" element={<InfoCenters />} />
         <Route path="diseases/infoDiseases" element={<InfoDiseases />} />
         <Route path="register" element={<Register />} />

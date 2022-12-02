@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   specialists: [],
+  specialist: {},
   isLoading: false,
   error: false,
 };
@@ -39,7 +40,7 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLoading: false,
         error: false,
-        specialists: [action.payload],
+        specialist: action.payload,
       };
     case "errorGetByIdSpecialists":
       return {

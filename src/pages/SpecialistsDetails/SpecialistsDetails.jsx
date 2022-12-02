@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import {
   deleteSpecialists,
   getByIdSpecialists,
+  // putSpecialists,
 } from "../../redux/specialists/specialists.functions";
 import "./SpecialistsDetails.scss";
 
@@ -13,13 +14,17 @@ const SpecialistsDetails = () => {
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
-  const { specialists, isLoading, error } = useSelector(
+  const { specialist, isLoading, error } = useSelector(
     (state) => state.specialists
   );
 
   const deleteSpecialist = (id) => {
     dispatch(deleteSpecialists(id, navigate));
   };
+
+  // const putSpecialist = (id) => {
+  //   dispatch(putSpecialists(id, navigate));
+  // };
 
   useEffect(() => {
     dispatch(getByIdSpecialists(id));
@@ -34,22 +39,28 @@ const SpecialistsDetails = () => {
           alt="loading"
         />
       ) : !error ? (
-        specialists.map((specialist) => {
-          return (
-            <div key={specialist._id}>
-              <h1>{specialist.name}</h1>
-              <p>{specialist.surname}</p>
-              <p>{specialist.img}</p>
-              <p>{specialist.specialistType}</p>
-              <p>{specialist.location}</p>
-              <p>{specialist.schedule}</p>
+        <div key={specialist._id}>
+          <h1>{specialist.name}</h1>
+          <p>{specialist.surname}</p>
+          <p>{specialist.age}</p>
+          <img src={specialist.img} alt="imagen"></img>
+          <p>{specialist.specialistType}</p>
+          <p>{specialist.location}</p>
+          <p>{specialist.schedule}</p>
 
-              <button onClick={() => deleteSpecialist(specialist._id)}>
-                Eliminar
-              </button>
-            </div>
-          );
-        })
+          <button onClick={() => deleteSpecialist(specialist._id)}>
+            Eliminar
+          </button>
+          {/* <button onClick={() => putSpecialist(specialist._id)}>
+                Edita
+              </button> */}
+          <Link
+            to={`/specialistsPut/edit/${specialist._id}`}
+            key={specialist._id}
+          >
+            Edita
+          </Link>
+        </div>
       ) : (
         <div>
           <h3>{error}</h3>
