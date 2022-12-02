@@ -5,6 +5,7 @@ const INITIAL_STATE = {
 };
 
 const specialistsReducer = (state = INITIAL_STATE, action) => {
+  const mySpecialits = state.specialists;
   switch (action.type) {
     case "gettingSpecialists":
       return {
@@ -24,6 +25,27 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLoading: false,
         specialists: [],
+        error: action.payload,
+      };
+
+    case "postingSpecialits":
+      return {
+        ...state,
+        isLoading: true,
+        error: false,
+      };
+    case "postSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        error: false,
+        specialists: [...mySpecialits, action.payload],
+      };
+    case "errorPostSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        specialists: [...mySpecialits],
         error: action.payload,
       };
 

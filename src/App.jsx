@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home/Home";
 import Diseases from "./pages/Diseases/Diseases";
@@ -10,8 +10,19 @@ import InfoDiseases from "./pages/InfoDiseases/InfoDiseases";
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Specialists from "./pages/Specialists/Specialists";
+import { useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { checkSession } from "./redux/auth/auth.actions";
+import SpecialistsCreate from "./pages/SpecialistsCreate/SpecialistsCreate";
 
 function App() {
+  const dispatch = useDispatch();
+  const token = localStorage.getItem("token");
+  const navigate = useNavigate();
+  useEffect(() => {
+    token && dispatch(checkSession(token, navigate));
+  }, []);
+
   return (
     <div className="App">
       <Navbar />
@@ -20,6 +31,7 @@ function App() {
         <Route path="diseases" element={<Diseases />} />
         <Route path="centers" element={<Centers />} />
         <Route path="specialists" element={<Specialists />} />
+        <Route path="specialistsCreate" element={<SpecialistsCreate />} />
         <Route path="centers/infoCenters" element={<InfoCenters />} />
         <Route path="diseases/infoDiseases" element={<InfoDiseases />} />
         <Route path="register" element={<Register />} />

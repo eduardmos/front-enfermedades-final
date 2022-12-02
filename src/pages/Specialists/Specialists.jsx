@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import "./Specialists.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getSpecialists } from "../../redux/specialists/specialists.functions";
+import { SpecialistsCreate } from "../SpecialistsCreate/SpecialistsCreate";
+import { NavLink } from "react-router-dom";
 
 const Specialists = () => {
   const dispatch = useDispatch();
@@ -15,6 +17,9 @@ const Specialists = () => {
 
   return (
     <div>
+      <div>
+        <NavLink to={"/specialistsCreate"}>+</NavLink>
+      </div>
       {isLoading ? (
         <img
           src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
