@@ -21,7 +21,7 @@ const Diseases = () => {
       ) : !error ? (
         diseases.map((disease) => {
           return (
-            <div>
+            <div key={disease._id}>
               <h1>{disease.name}</h1>
             </div>
           );

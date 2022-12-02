@@ -2,7 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import {putSpecialists} from "../../redux/specialists/specialists.functions"
+import { putSpecialists } from "../../redux/specialists/specialists.functions";
 
 const SpecialistsPut = () => {
   const { register, handleSubmit } = useForm();
@@ -15,13 +15,13 @@ const SpecialistsPut = () => {
     const formData = new FormData();
     formData.append("name", data.name);
     formData.append("surname", data.surname);
-    formData.append("age", data.year);
+    formData.append("age", data.age);
     formData.append("img", data.img[0]);
     formData.append("specialistType", data.specialistType);
     formData.append("location", data.location);
     formData.append("schedule", data.schedule);
-    
-//TODO
+
+    //TODO
     dispatch(putSpecialists(formData, navigate));
     console.log("Info del posts", formData);
   };

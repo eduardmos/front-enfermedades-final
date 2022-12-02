@@ -14,6 +14,7 @@ import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { checkSession } from "./redux/auth/auth.actions";
 import SpecialistsCreate from "./pages/SpecialistsCreate/SpecialistsCreate";
+import SpecialistsDetails from "./pages/SpecialistsDetails/SpecialistsDetails";
 
 function App() {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ function App() {
         <Route path="diseases" element={<Diseases />} />
         <Route path="centers" element={<Centers />} />
         <Route path="specialists" element={<Specialists />} />
+        <Route path="specialists/:id" element={<SpecialistsDetails />} />
         <Route path="specialistsCreate" element={<SpecialistsCreate />} />
         <Route path="centers/infoCenters" element={<InfoCenters />} />
         <Route path="diseases/infoDiseases" element={<InfoDiseases />} />

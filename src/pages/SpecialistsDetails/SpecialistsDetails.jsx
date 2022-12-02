@@ -1,24 +1,24 @@
 import React, { useEffect } from "react";
-import "./Specialists.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { getSpecialists } from "../../redux/specialists/specialists.functions";
-import { Link, NavLink } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import { getByIdSpecialists } from "../../redux/specialists/specialists.functions";
+import "./SpecialistsDetails.scss";
 
-const Specialists = () => {
+const SpecialistsDetails = () => {
+  const { id } = useParams();
+  // console.log(id);
   const dispatch = useDispatch();
   const { specialists, isLoading, error } = useSelector(
     (state) => state.specialists
   );
 
   useEffect(() => {
-    dispatch(getSpecialists());
+    dispatch(getByIdSpecialists(id));
+    console.log("Datos recogidos por id", specialists);
   }, []);
 
   return (
     <div>
-      <div>
-        <NavLink to={"/specialistsCreate"}>+</NavLink>
-      </div>
       {isLoading ? (
         <img
           src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
@@ -29,9 +29,11 @@ const Specialists = () => {
           return (
             <div key={specialist._id}>
               <h1>{specialist.name}</h1>
-              <Link to={`/specialists/${specialist._id}`} key={specialist._id}>
-                Ver Mas
-              </Link>
+              <p>{specialist.surname}</p>
+              <p>{specialist.img}</p>
+              <p>{specialist.specialistType}</p>
+              <p>{specialist.location}</p>
+              <p>{specialist.schedule}</p>
             </div>
           );
         })
@@ -44,4 +46,4 @@ const Specialists = () => {
   );
 };
 
-export default Specialists;
+export default SpecialistsDetails;

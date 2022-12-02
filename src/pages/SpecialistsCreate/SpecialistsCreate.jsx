@@ -15,7 +15,7 @@ const SpecialistsCreate = () => {
     const formData = new FormData();
     formData.append("name", data.name);
     formData.append("surname", data.surname);
-    formData.append("age", data.year);
+    formData.append("age", data.age);
     formData.append("img", data.img[0]);
     formData.append("specialistType", data.specialistType);
     formData.append("location", data.location);

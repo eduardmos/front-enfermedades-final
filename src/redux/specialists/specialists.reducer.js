@@ -20,7 +20,7 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         specialists: action.payload,
         error: false,
       };
-    case "errorSpecialists":
+    case "errorGetSpecialists":
       return {
         ...state,
         isLoading: false,
@@ -28,7 +28,28 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         error: action.payload,
       };
 
-    case "postingSpecialits":
+    case "gettingByIdSpecialists":
+      return {
+        ...state,
+        isLoading: true,
+        error: false,
+      };
+    case "getByIdSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        error: false,
+        specialists: [ action.payload],
+      };
+    case "errorGetByIdSpecialists":
+      return {
+        ...state,
+        isLoading: false,
+        specialists: [...mySpecialits],
+        error: action.payload,
+      };
+
+    case "postingSpecialists":
       return {
         ...state,
         isLoading: true,
@@ -48,7 +69,8 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         specialists: [...mySpecialits],
         error: action.payload,
       };
-      case "puttingSpecialits":
+
+    case "puttingSpecialists":
       return {
         ...state,
         isLoading: true,
@@ -68,27 +90,8 @@ const specialistsReducer = (state = INITIAL_STATE, action) => {
         specialists: [...mySpecialits],
         error: action.payload,
       };
-      case "gettingByIdSpecialits":
-      return {
-        ...state,
-        isLoading: true,
-        error: false,
-      };
-    case "getByIdSpecialists":
-      return {
-        ...state,
-        isLoading: false,
-        error: false,
-        specialists: [...mySpecialits, action.payload],
-      };
-    case "errorGetByIdSpecialists":
-      return {
-        ...state,
-        isLoading: false,
-        specialists: [...mySpecialits],
-        error: action.payload,
-      };
-      case "delettingSpecialits":
+
+    case "delettingSpecialists":
       return {
         ...state,
         isLoading: true,
