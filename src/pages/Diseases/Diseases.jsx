@@ -22,25 +22,12 @@ const Diseases = () => {
       ) : !error ? (
         diseases.map((disease) => {
           return (
-            <div>
-              {" "}
-              <div key={disease._id}>
+            <div key={disease._id}>
+              <div>
                 <h1>{disease.name}</h1>
               </div>
               <Link to={`/diseasesCreate`} key={disease._id}>
                 +
-              </Link>
-              <Link
-                to={`/specialistsPut/edit/${disease._id}`}
-                key={disease._id}
-              >
-                Edita
-              </Link>
-              <Link
-                to={`/specialistsPut/edit/${disease._id}`}
-                key={disease._id}
-              >
-                Elimina
               </Link>
             </div>
           );

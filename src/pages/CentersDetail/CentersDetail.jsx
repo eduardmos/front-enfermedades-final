@@ -9,17 +9,21 @@ import {
 } from "../../redux/centers/centers.functions";
 const CentersDetail = () => {
   const { id } = useParams();
-
+  //Aqui llega la id
+  // console.log(id);
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
   const { center, isLoading, error } = useSelector((state) => state.centers);
-
+  console.log(center);
+  //A esta funcion no llega
   const deleteCenter = (id) => {
+    // console.log("Hola", id);
     dispatch(deleteCenters(id, navigate));
   };
 
   useEffect(() => {
+    // console.log("a", id);
     dispatch(getByIdCenters(id));
   }, []);
 
@@ -33,6 +37,7 @@ const CentersDetail = () => {
       ) : !error ? (
         <div key={center._id}>
           <h1>{center.name}</h1>
+          <p>Id:{center._id}</p>
           <img src={center.img} alt="imagen"></img>
           <p>{center.location}</p>
           <p>{center.schedule}</p>

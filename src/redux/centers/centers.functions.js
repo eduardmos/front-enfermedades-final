@@ -17,8 +17,8 @@ export const getByIdCenters = (id) => async (dispatch) => {
 
   try {
     const getById = await API.get(`centers/${id}`);
-
-    dispatch({ type: "getByIdCenters ", payload: getById.data });
+    console.log(getById);
+    dispatch({ type: "getByIdCenters", payload: getById.data });
   } catch (error) {
     dispatch({ type: "errorByIdCenters", payload: error.message });
   }
@@ -55,10 +55,14 @@ export const putCenters = (data, navigate, id) => async (dispatch) => {
 //Eliminar
 export const deleteCenters = (id, navigate) => async (dispatch) => {
   dispatch({ type: "delettingCenters" });
-
+  // console.log("Cargando eliminar centers");
   try {
+    // console.log("Dentro del try");
+    // console.log(id);
     await API.delete(`centers/delete/${id}`);
+    console.log("Despues de llamar a la ruta del delete");
     const newCenters = await API.get("/centers");
+    console.log("Despues de borrar: ", newCenters);
     dispatch({ type: "deleteCenters", payload: newCenters.data });
     navigate("/centers");
   } catch (error) {
