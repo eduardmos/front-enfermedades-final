@@ -31,6 +31,9 @@ const SpecialistsDetails = () => {
     // console.log("Datos recogidos por id", specialists);
   }, []);
 
+  const { user } = useSelector((state) => state.auth);
+  const isAdmin = user && user.rol === "admin";
+
   return (
     <div>
       {isLoading ? (
@@ -48,18 +51,22 @@ const SpecialistsDetails = () => {
           <p>{specialist.location}</p>
           <p>{specialist.schedule}</p>
 
-          <button onClick={() => deleteSpecialist(specialist._id)}>
-            Eliminar
-          </button>
-          {/* <button onClick={() => putSpecialist(specialist._id)}>
+          {isAdmin && (
+            <>
+              <button onClick={() => deleteSpecialist(specialist._id)}>
+                Eliminar
+              </button>
+              {/* <button onClick={() => putSpecialist(specialist._id)}>
                 Edita
               </button> */}
-          <Link
-            to={`/specialistsPut/edit/${specialist._id}`}
-            key={specialist._id}
-          >
-            Edita
-          </Link>
+              <Link
+                to={`/specialistsPut/edit/${specialist._id}`}
+                key={specialist._id}
+              >
+                Edita
+              </Link>
+            </>
+          )}
         </div>
       ) : (
         <div>

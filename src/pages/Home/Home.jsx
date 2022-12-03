@@ -6,24 +6,10 @@ import "./Home.scss";
 
 const Home = () => {
   const { user } = useSelector((state) => state.auth);
-  console.log("User: ",user.rol);
 
   return (
     <div>
-      <div>
-        <Link to="/specialists">Especialistas</Link>
-        <Link to="/centers">Centros</Link>
-      </div>
-      <div>
-        {/* {user.rol === "admin" && (
-          <>
-            <Link to={`/diseasesCreate`}>+</Link>
-            <Diseases></Diseases>
-          </>
-        )}
-        {user.rol === "user" && <Diseases></Diseases>}
-        {user === null && <Diseases></Diseases>} */}
-      </div>
+      <Diseases />
     </div>
   );
 };

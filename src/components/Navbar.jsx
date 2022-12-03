@@ -5,7 +5,7 @@ import Logout from "./Logout";
 
 const Navbar = () => {
   const { user } = useSelector((state) => state.auth);
-  
+
   return (
     <div>
       <nav>
@@ -13,9 +13,13 @@ const Navbar = () => {
           Icono
         </NavLink>
         <NavLink>Titulo</NavLink>
+
+        <NavLink to="/specialists">Especialistas</NavLink>
+        <NavLink to="/centers">Centros</NavLink>
         <NavLink to="aboutus" activeclassname={"active"}>
           About Us
         </NavLink>
+
         {!user && (
           <>
             <NavLink to="login" activeclassname={"active"}>

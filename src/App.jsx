@@ -14,7 +14,7 @@ import { checkSession } from "./redux/auth/auth.actions";
 import SpecialistsCreate from "./pages/SpecialistsCreate/SpecialistsCreate";
 import SpecialistsDetails from "./pages/SpecialistsDetails/SpecialistsDetails";
 import SpecialistsPut from "./pages/SpecialistsPut/SpecialistsPut";
-import DiseasesDetail from "./pages/DiseasesDetail/DiseasesDetail";
+
 import DiseasesCreate from "./pages/DiseasesCreate/DiseasesCreate";
 import DiseasesPut from "./pages/DiseasesPut/DiseasesPut";
 import CentersDetails from "./pages/CentersDetail/CentersDetail";
@@ -34,7 +34,7 @@ function App() {
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="diseases" element={<Diseases />} />
-        <Route path="diseases/:id" element={<DiseasesDetail />} />
+
         <Route path="diseasesCreate" element={<DiseasesCreate />} />
         <Route path="diseasesPut/edit/:id" element={<DiseasesPut />} />
         <Route path="centers" element={<Centers />} />

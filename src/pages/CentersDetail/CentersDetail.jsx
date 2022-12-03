@@ -27,6 +27,9 @@ const CentersDetail = () => {
     dispatch(getByIdCenters(id));
   }, []);
 
+  const { user } = useSelector((state) => state.auth);
+  const isAdmin = user && user.rol === "admin";
+
   return (
     <div>
       {isLoading ? (
@@ -41,12 +44,14 @@ const CentersDetail = () => {
           <img src={center.img} alt="imagen"></img>
           <p>{center.location}</p>
           <p>{center.schedule}</p>
-
-          <button onClick={() => deleteCenter(center._id)}>Eliminar</button>
-
-          <Link to={`/centersPut/edit/${center._id}`} key={center._id}>
-            Edita
-          </Link>
+          {isAdmin && (
+            <>
+              <button onClick={() => deleteCenter(center._id)}>Eliminar</button>
+              <Link to={`/centersPut/edit/${center._id}`} key={center._id}>
+                Edita
+              </Link>
+            </>
+          )}
         </div>
       ) : (
         <div>
