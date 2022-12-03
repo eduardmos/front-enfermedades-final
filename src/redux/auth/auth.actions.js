@@ -6,7 +6,7 @@ export const newUser = (formdata, navigate) => async (dispatch) => {
     console.log("Por encima de la ruta a la API");
     const result = await API.post("users/create", formdata);
     dispatch({ type: "register_user_ok" });
-    console.log(result);
+    // console.log(result);
     navigate("/login");
   } catch (error) {
     dispatch({ type: "register_user_error" });
@@ -40,7 +40,7 @@ export const checkSession = (token, navigate) => async (dispatch) => {
       payload: { user: result.data, token: token },
     });
     localStorage.setItem("token", token);
-    console.log(result);
+    // console.log(result);
     navigate("/");
   } catch (error) {
     dispatch({ type: "checkSession_error" });

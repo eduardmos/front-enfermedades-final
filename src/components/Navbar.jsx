@@ -5,6 +5,7 @@ import Logout from "./Logout";
 
 const Navbar = () => {
   const { user } = useSelector((state) => state.auth);
+  
   return (
     <div>
       <nav>
