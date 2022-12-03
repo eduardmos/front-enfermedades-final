@@ -6,7 +6,7 @@ const INITIAL_STATE = {
 };
 
 const diseasesReducer = (state = INITIAL_STATE, action) => {
-  const myDiseases = state.disease;
+  const myDiseases = state.diseases;
   switch (action.type) {
     case "gettingDiseases":
       return {
@@ -41,7 +41,7 @@ const diseasesReducer = (state = INITIAL_STATE, action) => {
         ...state,
         isLoading: false,
         error: false,
-        diseases: action.payload,
+        disease: action.payload,
       };
 
     case "errorGetByIdDiseases":

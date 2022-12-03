@@ -1,12 +1,22 @@
 import React, { useEffect } from "react";
 import "./Diseases.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { getDiseases } from "../../redux/diseases/diseases.functions";
-import { Link } from "react-router-dom";
+import {
+  deleteDiseases,
+  getDiseases,
+} from "../../redux/diseases/diseases.functions";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const Diseases = () => {
+  const { id } = useParams();
+
+  let navigate = useNavigate();
   const dispatch = useDispatch();
   const { diseases, isLoading, error } = useSelector((state) => state.diseases);
+
+  const deleteSpecialist = (id) => {
+    dispatch(deleteDiseases(id, navigate));
+  };
 
   useEffect(() => {
     dispatch(getDiseases());
@@ -26,8 +36,15 @@ const Diseases = () => {
               <div>
                 <h1>{disease.name}</h1>
               </div>
-              <Link to={`/diseasesCreate`} key={disease._id}>
-                +
+
+              <button onClick={() => deleteSpecialist(disease._id)}>
+                Eliminar
+              </button>
+              {/* <button onClick={() => putSpecialist(specialist._id)}>
+                Edita
+              </button> */}
+              <Link to={`diseasesPut/edit/${disease._id}`} key={disease._id}>
+                Edita
               </Link>
             </div>
           );

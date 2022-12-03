@@ -11,6 +11,7 @@ const Home = () => {
         <Link to="/centers">Centros</Link>
       </div>
       <div>
+        <Link to={`/diseasesCreate`}>+</Link>
         <Diseases></Diseases>
       </div>
     </div>

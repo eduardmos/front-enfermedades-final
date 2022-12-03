@@ -12,8 +12,10 @@ const DiseasesPut = () => {
   const { id } = useParams();
   let navigate = useNavigate();
   const dispatch = useDispatch();
+
   const { disease } = useSelector((state) => state.diseases);
   console.log(disease);
+
   // useEffect(() => {
   //   dispatch(putSpecialists(id));
   //   // console.log("Datos recogidos por id", specialists);
@@ -36,7 +38,7 @@ const DiseasesPut = () => {
 
   return (
     <div>
-      <h2>Edita la enfermdad</h2>
+      <h2>Edita la enfermedad</h2>
       {disease && (
         <form onSubmit={handleSubmit(editDiseases)}>
           <label>

@@ -32,7 +32,7 @@ const centersReducer = (state = INITIAL_STATE, action) => {
     case "gettingByIdCenters":
       return {
         ...state,
-        isLoading: false,
+        isLoading: true,
         error: false,
       };
 
