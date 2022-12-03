@@ -14,12 +14,12 @@ import { checkSession } from "./redux/auth/auth.actions";
 import SpecialistsCreate from "./pages/SpecialistsCreate/SpecialistsCreate";
 import SpecialistsDetails from "./pages/SpecialistsDetails/SpecialistsDetails";
 import SpecialistsPut from "./pages/SpecialistsPut/SpecialistsPut";
-
 import DiseasesCreate from "./pages/DiseasesCreate/DiseasesCreate";
 import DiseasesPut from "./pages/DiseasesPut/DiseasesPut";
 import CentersDetails from "./pages/CentersDetail/CentersDetail";
 import CentersPut from "./pages/CentersPut/CentersPut";
 import CentersCreate from "./pages/CentersCreate/CentersCreate";
+
 function App() {
   const dispatch = useDispatch();
   const token = localStorage.getItem("token");
@@ -45,7 +45,6 @@ function App() {
         <Route path="specialists/:id" element={<SpecialistsDetails />} />
         <Route path="specialistsCreate" element={<SpecialistsCreate />} />
         <Route path="specialistsPut/edit/:id" element={<SpecialistsPut />} />
-
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="aboutus" element={<AboutUs />} />
