@@ -14,6 +14,7 @@ const CentersPut = () => {
   const dispatch = useDispatch();
   const { center } = useSelector((state) => state.centers);
   console.log(center);
+
   // useEffect(() => {
   //   dispatch(putSpecialists(id));
   //   // console.log("Datos recogidos por id", specialists);
@@ -46,7 +47,7 @@ const CentersPut = () => {
               type="text"
               name="name"
               {...register("name")}
-              value={center.name}
+              defaultValue={center.name}
             ></input>
           </label>
           <label>
@@ -55,7 +56,7 @@ const CentersPut = () => {
               type="text"
               name="description"
               {...register("description")}
-              value={center.description}
+              defaultValue={center.description}
             ></input>
           </label>
           <label>
@@ -68,7 +69,7 @@ const CentersPut = () => {
               type="text"
               name="ubication"
               {...register("ubication")}
-              value={center.ubication}
+              defaultValue={center.ubication}
             ></input>
           </label>
           <label>
@@ -77,7 +78,7 @@ const CentersPut = () => {
               type="text"
               name="direction"
               {...register("direction")}
-              value={center.direction}
+              defaultValue={center.direction}
             ></input>
           </label>
           <label>
@@ -86,7 +87,7 @@ const CentersPut = () => {
               type="text"
               name="number"
               {...register("number")}
-              value={center.number}
+              defaultValue={center.number}
             ></input>
           </label>
           <label>
@@ -95,7 +96,7 @@ const CentersPut = () => {
               type="text"
               name="schedule"
               {...register("schedule")}
-              value={center.schedule}
+              defaultValue={center.schedule}
             ></input>
           </label>
 

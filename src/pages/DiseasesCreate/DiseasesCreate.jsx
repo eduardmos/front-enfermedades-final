@@ -34,7 +34,11 @@ const DiseasesCreate = () => {
         </label>
         <label>
           Description
-          <input type="text" name="surname" {...register("surname")}></input>
+          <input
+            type="text"
+            name="description"
+            {...register("description")}
+          ></input>
         </label>
         <label>
           Imagen

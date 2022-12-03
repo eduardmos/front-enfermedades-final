@@ -33,7 +33,7 @@ export const postDiseases = (datos, navigate) => async (dispatch) => {
   try {
     const result = await API2.post("diseases/create", datos);
     dispatch({ type: "postDiseases", payload: result.data });
-    navigate("/diseases");
+    navigate("/");
   } catch (error) {
     dispatch({ type: "errorPostDiseases", payload: error.message });
   }
@@ -48,7 +48,7 @@ export const putDiseases = (data, navigate, id) => async (dispatch) => {
     await API2.put(`diseases/edit/${id}`, data);
     const userUpdate = await API2.get("diseases");
     dispatch({ type: "putDiseases", payload: userUpdate.data });
-    navigate("/diseases");
+    navigate("/");
   } catch (error) {
     dispatch({ type: "errorPutDiseases", payload: error.message });
   }
@@ -62,7 +62,7 @@ export const deleteDiseases = (id, navigate) => async (dispatch) => {
     await API.delete(`diseases/delete/${id}`);
     const newDiseases = await API.get("/diseases");
     dispatch({ type: "deleteDiseases", payload: newDiseases.data });
-    navigate("/diseases");
+    navigate("/");
   } catch (error) {
     dispatch({ type: "errorDeleteDiseases", payload: error.message });
   }

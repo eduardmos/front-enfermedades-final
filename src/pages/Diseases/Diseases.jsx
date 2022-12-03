@@ -35,6 +35,11 @@ const Diseases = () => {
             <div key={disease._id}>
               <div>
                 <h1>{disease.name}</h1>
+                <p>{disease.description}</p>
+                <img src={disease.img} alt={disease.name}></img>
+                <p>{disease.symptoms}</p>
+                <p>{disease.treatment}</p>
+                <p>{disease.mortality}</p>
               </div>
 
               <button onClick={() => deleteSpecialist(disease._id)}>

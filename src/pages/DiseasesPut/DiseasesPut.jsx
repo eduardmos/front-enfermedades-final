@@ -1,4 +1,5 @@
 // import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
@@ -13,13 +14,13 @@ const DiseasesPut = () => {
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
+  useEffect(() => {
+    dispatch(getByIdDiseases(id));
+    // console.log("Datos recogidos por id", specialists);
+  }, []);
+
   const { disease } = useSelector((state) => state.diseases);
   console.log(disease);
-
-  // useEffect(() => {
-  //   dispatch(putSpecialists(id));
-  //   // console.log("Datos recogidos por id", specialists);
-  // }, []);
 
   const editDiseases = async (data) => {
     // console.log(data.img[0]);
@@ -47,7 +48,7 @@ const DiseasesPut = () => {
               type="text"
               name="name"
               {...register("name")}
-              value={disease.name}
+              defaultValue={disease.name}
             ></input>
           </label>
           <label>
@@ -56,7 +57,7 @@ const DiseasesPut = () => {
               type="text"
               name="description"
               {...register("description")}
-              value={disease.description}
+              defaultValue={disease.description}
             ></input>
           </label>
           <label>
@@ -67,9 +68,9 @@ const DiseasesPut = () => {
             Sintomas
             <input
               type="text"
-              name="symptomas"
+              name="symptoms"
               {...register("symptoms")}
-              value={disease.age}
+              defaultValue={disease.symptoms}
             ></input>
           </label>
           <label>
@@ -78,7 +79,7 @@ const DiseasesPut = () => {
               type="text"
               name="treatment"
               {...register("treatment")}
-              value={disease.treatment}
+              defaultValue={disease.treatment}
             ></input>
           </label>
           <label>
@@ -87,7 +88,7 @@ const DiseasesPut = () => {
               type="text"
               name="mortality"
               {...register("mortality")}
-              value={disease.mortality}
+              defaultValue={disease.mortality}
             ></input>
           </label>
 

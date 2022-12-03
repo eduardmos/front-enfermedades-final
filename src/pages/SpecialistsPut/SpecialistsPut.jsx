@@ -46,7 +46,7 @@ const SpecialistsPut = () => {
               type="text"
               name="name"
               {...register("name")}
-              value={specialist.name}
+              defaultValue={specialist.name}
             ></input>
           </label>
           <label>
@@ -55,7 +55,7 @@ const SpecialistsPut = () => {
               type="text"
               name="surname"
               {...register("surname")}
-              value={specialist.surname}
+              defaultValue={specialist.surname}
             ></input>
           </label>
           <label>
@@ -68,7 +68,7 @@ const SpecialistsPut = () => {
               type="text"
               name="age"
               {...register("age")}
-              value={specialist.age}
+              defaultValue={specialist.age}
             ></input>
           </label>
 
@@ -76,7 +76,7 @@ const SpecialistsPut = () => {
             Tipo de Especialidad
             <select
               {...register("specialistType")}
-              value={specialist.specialistType}
+              defaultValue={specialist.specialistType}
             >
               <option>Fisioterapeuta</option>
               <option>Auxiliar de Enfermeria</option>
@@ -91,7 +91,7 @@ const SpecialistsPut = () => {
               type="text"
               name="location"
               {...register("location")}
-              value={specialist.location}
+              defaultValue={specialist.location}
             ></input>
           </label>
           <label>
