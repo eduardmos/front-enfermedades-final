@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./Diseases.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getDiseases } from "../../redux/diseases/diseases.functions";
+import { Link } from "react-router-dom";
 
 const Diseases = () => {
   const dispatch = useDispatch();
@@ -21,8 +22,26 @@ const Diseases = () => {
       ) : !error ? (
         diseases.map((disease) => {
           return (
-            <div key={disease._id}>
-              <h1>{disease.name}</h1>
+            <div>
+              {" "}
+              <div key={disease._id}>
+                <h1>{disease.name}</h1>
+              </div>
+              <Link to={`/diseasesCreate`} key={disease._id}>
+                +
+              </Link>
+              <Link
+                to={`/specialistsPut/edit/${disease._id}`}
+                key={disease._id}
+              >
+                Edita
+              </Link>
+              <Link
+                to={`/specialistsPut/edit/${disease._id}`}
+                key={disease._id}
+              >
+                Elimina
+              </Link>
             </div>
           );
         })

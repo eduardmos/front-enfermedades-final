@@ -5,8 +5,6 @@ import Diseases from "./pages/Diseases/Diseases";
 import Centers from "./pages/Centers/Centers";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
-import InfoCenters from "./pages/CentersDetail/CentersDetail";
-import InfoDiseases from "./pages/InfoDiseases/InfoDiseases";
 import Navbar from "./components/Navbar";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Specialists from "./pages/Specialists/Specialists";
@@ -16,7 +14,12 @@ import { checkSession } from "./redux/auth/auth.actions";
 import SpecialistsCreate from "./pages/SpecialistsCreate/SpecialistsCreate";
 import SpecialistsDetails from "./pages/SpecialistsDetails/SpecialistsDetails";
 import SpecialistsPut from "./pages/SpecialistsPut/SpecialistsPut";
-
+import DiseasesDetail from "./pages/DiseasesDetail/DiseasesDetail";
+import DiseasesCreate from "./pages/DiseasesCreate/DiseasesCreate";
+import DiseasesPut from "./pages/DiseasesPut/DiseasesPut";
+import CentersDetails from "./pages/CentersDetail/CentersDetail";
+import CentersPut from "./pages/CentersPut/CentersPut";
+import CentersCreate from "./pages/CentersCreate/CentersCreate";
 function App() {
   const dispatch = useDispatch();
   const token = localStorage.getItem("token");
@@ -31,13 +34,18 @@ function App() {
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="diseases" element={<Diseases />} />
+        <Route path="diseases/:id" element={<DiseasesDetail />} />
+        <Route path="diseasesCreate" element={<DiseasesCreate />} />
+        <Route path="diseasesPut/edit/:id" element={<DiseasesPut />} />
         <Route path="centers" element={<Centers />} />
+        <Route path="centers/:id" element={<CentersDetails />} />
+        <Route path="centersCreate" element={<CentersCreate />} />
+        <Route path="centersPut/edit/:id" element={<CentersPut />} />
         <Route path="specialists" element={<Specialists />} />
         <Route path="specialists/:id" element={<SpecialistsDetails />} />
         <Route path="specialistsCreate" element={<SpecialistsCreate />} />
         <Route path="specialistsPut/edit/:id" element={<SpecialistsPut />} />
-        <Route path="centers/infoCenters" element={<InfoCenters />} />
-        <Route path="diseases/infoDiseases" element={<InfoDiseases />} />
+
         <Route path="register" element={<Register />} />
         <Route path="login" element={<Login />} />
         <Route path="aboutus" element={<AboutUs />} />
