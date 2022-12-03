@@ -44,8 +44,8 @@ export const putDiseases = (data, navigate, id) => async (dispatch) => {
   dispatch({ type: "puttingDiseases" });
   // console.log(id);
   try {
-    // console.log(data);
     await API2.put(`diseases/edit/${id}`, data);
+
     const userUpdate = await API2.get("diseases");
     dispatch({ type: "putDiseases", payload: userUpdate.data });
     navigate("/");

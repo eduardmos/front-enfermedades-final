@@ -43,7 +43,7 @@ const SpecialistsCreate = () => {
         </label>
         <label>
           Edad
-          <input type="text" name="age" {...register("age")}></input>
+          <input type="number" name="age" {...register("age")}></input>
         </label>
 
         <label>

@@ -12,8 +12,9 @@ const SpecialistsPut = () => {
   const { id } = useParams();
   let navigate = useNavigate();
   const dispatch = useDispatch();
+
   const { specialist } = useSelector((state) => state.specialists);
-  console.log(specialist);
+  
   // useEffect(() => {
   //   dispatch(putSpecialists(id));
   //   // console.log("Datos recogidos por id", specialists);
@@ -65,7 +66,7 @@ const SpecialistsPut = () => {
           <label>
             Edad
             <input
-              type="text"
+              type="number"
               name="age"
               {...register("age")}
               defaultValue={specialist.age}
@@ -96,13 +97,16 @@ const SpecialistsPut = () => {
           </label>
           <label>
             Horario
-            <select {...register("schedule")} value={specialist.schedule}>
+            <select
+              {...register("schedule")}
+              defaultValue={specialist.schedule}
+            >
               <option>Mañana</option>
               <option>Tarde</option>
               <option>Noche</option>
             </select>
           </label>
-          <button>Añadir</button>
+          <button>Modificar</button>
         </form>
       )}
     </div>

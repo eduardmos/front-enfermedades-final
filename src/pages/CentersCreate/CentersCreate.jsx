@@ -63,7 +63,7 @@ const CentersCreate = () => {
         </label>
         <label>
           Numero
-          <input type="text" name="number" {...register("number")}></input>
+          <input type="number" name="number" {...register("number")}></input>
         </label>
         <label>
           Horario

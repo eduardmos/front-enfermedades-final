@@ -44,8 +44,9 @@ export const putSpecialists = (data, navigate, id) => async (dispatch) => {
   dispatch({ type: "puttingSpecialists" });
   // console.log(id);
   try {
-    // console.log(data);
+    console.log(data);
     await API2.put(`specialists/edit/${id}`, data);
+    console.log("Aqui creo que no");
     const userUpdate = await API2.get("specialists");
     dispatch({ type: "putSpecialists", payload: userUpdate.data });
     navigate("/specialists");

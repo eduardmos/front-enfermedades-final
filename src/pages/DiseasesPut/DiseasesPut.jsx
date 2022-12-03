@@ -20,7 +20,7 @@ const DiseasesPut = () => {
   }, []);
 
   const { disease } = useSelector((state) => state.diseases);
-  console.log(disease);
+  // console.log(disease);
 
   const editDiseases = async (data) => {
     // console.log(data.img[0]);
@@ -92,7 +92,7 @@ const DiseasesPut = () => {
             ></input>
           </label>
 
-          <button>Añadir</button>
+          <button>Modificar</button>
         </form>
       )}
     </div>

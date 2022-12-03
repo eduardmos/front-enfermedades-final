@@ -84,7 +84,7 @@ const CentersPut = () => {
           <label>
             Number
             <input
-              type="text"
+              type="number"
               name="number"
               {...register("number")}
               defaultValue={center.number}
