@@ -1,11 +1,14 @@
 .form-login {
-  background-color: #455d7a;;
-    border: 1px solid #233142;
-    border-radius: 5px;
+  background: rgba(99, 119, 252, 0.060);
+  box-shadow: 20px 20px 22px rgba(73, 62, 137, 0.105);
+  // backdrop-filter: blur(40px);
+  // mix-blend-mode:multiply;
+    border:1px solid rgba(67, 61, 91, 0.006);
+    border-radius: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 80%;
+    width: 20%;
     max-width: 1000px;
     margin: 5% auto;
     padding: 1em;
@@ -20,32 +23,44 @@
       label {
         width: 50%;
         padding: 1.5em;
-        color: white;
+        color:#080e21;
         input {
           display: flex;
           width: 100%;
           height: 20px;
           padding: 0.2em;
+          border-radius: 15px;
+          border: none;
         }
       }
     }
     button {
-      margin-top: 2em;
-      width: fit-content;
-      background: transparent;
-      border: none;
-      text-transform: uppercase;
-      color: #2a2c3a;
-      padding-bottom: 0.5em;
+      margin: 20px 0;
+      width: 20%;
+      height: 40px;
+      border-radius: 20px;
+      border:none;
+      background: rgba(255,255,255,0.6);
+      position:sticky;
+      left: 50%;
+      transform: translateX(-50%);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color:#080e21;
+
+     
+      
 
   
-      cursor: pointer;
+     
   
       &:hover {
       
         transition: all 0.3s;
         border-radius: 12px;
         padding: 0.4em;
+        background: rgba(18, 18, 18, 0.168);
+        color:white;
       }
     }
   }

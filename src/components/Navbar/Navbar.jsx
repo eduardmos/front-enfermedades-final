@@ -74,7 +74,7 @@ export default Navbar;
 
 const NavContainer = styled.nav`
   ${"" /* Barra en general, incluye el menu hamburguesa y lo que lo cierra */}
-  background-color: #2A2C3A;
+  background-color: #1D2233;
   display: flex;
   align-items: center;
   justify-content: space-between;
