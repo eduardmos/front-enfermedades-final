@@ -16,13 +16,13 @@ const Centers = () => {
   const isAdmin = user && user.rol === "admin";
 
   return (
-    <div>
+    <div className="center-box">
       {isAdmin && (
-        <div>
+        <div className="button-center-Create">
           <NavLink to={"/centersCreate"}>+ </NavLink>
         </div>
       )}
-      <div className="search-centers">
+      <div className="search-center">
         <input
           type="text"
           placeholder="Search..."
@@ -42,13 +42,15 @@ const Centers = () => {
           )
           .map((center) => {
             return (
-              <div key={center._id}>
+              <div className="center-box-eachCard" key={center._id}>
                 <h1>{center.name}</h1>
                 <img src={center.img} alt="center-img"></img>
                 <p>{center.ubication}</p>
-                <Link to={`/centers/${center._id}`} key={center._id}>
-                  Ver más
-                </Link>
+                <div className="button-center">
+                  <Link to={`/centers/${center._id}`} key={center._id}>
+                    Ver más
+                  </Link>
+                </div>
               </div>
             );
           })

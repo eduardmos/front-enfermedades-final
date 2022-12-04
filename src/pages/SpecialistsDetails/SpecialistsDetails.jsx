@@ -35,21 +35,21 @@ const SpecialistsDetails = () => {
   const isAdmin = user && user.rol === "admin";
 
   return (
-    <div>
+    <div className="first-box-specialist">
       {isLoading ? (
         <img
           src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
           alt="loading"
         />
       ) : !error ? (
-        <div key={specialist._id}>
+        <div className="specialist-box" key={specialist._id}>
           <h1>{specialist.name}</h1>
-          <p>{specialist.surname}</p>
+          <p className="surname">{specialist.surname}</p>
           <p>{specialist.age}</p>
           <img src={specialist.img} alt="imagen"></img>
           <p>{specialist.specialistType}</p>
-          <p>{specialist.location}</p>
-          <p>{specialist.schedule}</p>
+          <p>Ubicación: {specialist.location}</p>
+          <p>Horario: {specialist.schedule}</p>
 
           {isAdmin && (
             <>

@@ -15,7 +15,7 @@ const Diseases = () => {
   const dispatch = useDispatch();
   const { diseases, isLoading, error } = useSelector((state) => state.diseases);
 
-  const deleteSpecialist = (id) => {
+  const toDeleteDiseases = (id) => {
     dispatch(deleteDiseases(id, navigate));
   };
 
@@ -30,8 +30,9 @@ const Diseases = () => {
     <div className="diseases-box">
       {isAdmin && (
         <div>
-          <CustomButton text="Funciona?"></CustomButton>
-          <NavLink to={"/diseasesCreate"}>+</NavLink>
+          <NavLink to={"/diseasesCreate"}>
+            <CustomButton text="Añadir Nueva Enfermedad"></CustomButton>
+          </NavLink>
         </div>
       )}
       {isLoading ? (
@@ -54,9 +55,13 @@ const Diseases = () => {
 
               {isAdmin && (
                 <>
-                  <button onClick={() => deleteSpecialist(disease._id)}>
+                  <CustomButton
+                    text="Eliminar"
+                    onClick={() => toDeleteDiseases(disease._id)}
+                  ></CustomButton>
+                  {/* <button onClick={() => toDeleteDiseases(disease._id)}>
                     Eliminar
-                  </button>
+                  </button> */}
                   {/* <button onClick={() => putSpecialist(specialist._id)}>
                 Edita
               </button> */}
@@ -64,7 +69,7 @@ const Diseases = () => {
                     to={`diseasesPut/edit/${disease._id}`}
                     key={disease._id}
                   >
-                    Edita
+                    <CustomButton text="Editar"></CustomButton>
                   </Link>
                 </>
               )}

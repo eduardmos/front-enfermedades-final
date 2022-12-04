@@ -7,6 +7,7 @@ import {
   deleteCenters,
   getByIdCenters,
 } from "../../redux/centers/centers.functions";
+import "./CentersDetail.scss";
 const CentersDetail = () => {
   const { id } = useParams();
   //Aqui llega la id
@@ -31,14 +32,14 @@ const CentersDetail = () => {
   const isAdmin = user && user.rol === "admin";
 
   return (
-    <div>
+    <div className="first-center-box">
       {isLoading ? (
         <img
           src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
           alt="loading"
         />
       ) : !error ? (
-        <div key={center._id}>
+        <div className="center-box" key={center._id}>
           <h1>{center.name}</h1>
           <p>Id:{center._id}</p>
           <img src={center.img} alt="imagen"></img>
