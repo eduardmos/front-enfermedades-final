@@ -1,14 +1,14 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import Logout from "./Logout";
+import Logout from "../Logout";
 
 const Navbar = () => {
   const { user } = useSelector((state) => state.auth);
 
   return (
-    <div>
-      <nav>
+    <nav>
+      
         <NavLink to="" activeclassname={"active"}>
           Icono
         </NavLink>
@@ -35,8 +35,8 @@ const Navbar = () => {
             <Logout />
           </NavLink>
         )}
-      </nav>
-    </div>
+      
+    </nav>
   );
 };
 
