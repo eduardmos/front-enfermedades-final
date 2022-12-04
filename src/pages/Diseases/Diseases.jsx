@@ -5,10 +5,11 @@ import {
   deleteDiseases,
   getDiseases,
 } from "../../redux/diseases/diseases.functions";
-import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const Diseases = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
 
   let navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ const Diseases = () => {
     <div className="diseases-box">
       {isAdmin && (
         <div>
+          <CustomButton text="Funciona?"></CustomButton>
           <NavLink to={"/diseasesCreate"}>+</NavLink>
         </div>
       )}

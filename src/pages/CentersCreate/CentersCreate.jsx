@@ -27,9 +27,9 @@ const CentersCreate = () => {
   };
 
   return (
-    <div>
+    <div className="form-create-centers">
       <h2>Nuevo Centro</h2>
-      <form onSubmit={handleSubmit(createCenters)}>
+      <form className="form--box" onSubmit={handleSubmit(createCenters)}>
         <label>
           Nombre
           <input type="text" name="name" {...register("name")}></input>

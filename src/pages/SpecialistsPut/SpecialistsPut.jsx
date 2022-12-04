@@ -14,7 +14,7 @@ const SpecialistsPut = () => {
   const dispatch = useDispatch();
 
   const { specialist } = useSelector((state) => state.specialists);
-  
+
   // useEffect(() => {
   //   dispatch(putSpecialists(id));
   //   // console.log("Datos recogidos por id", specialists);
@@ -37,10 +37,10 @@ const SpecialistsPut = () => {
   };
 
   return (
-    <div>
+    <div className="form-specialists-put">
       <h2>Edita el Especialista</h2>
       {specialist && (
-        <form onSubmit={handleSubmit(editSpecialists)}>
+        <form className="form--box" onSubmit={handleSubmit(editSpecialists)}>
           <label>
             Nombre
             <input

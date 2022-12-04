@@ -1,5 +1,5 @@
 import React from "react";
-import "./GraphicEsclerosis.scss";
+
 import { Bar } from "react-chartjs-2";
 // import { CategoryScale } from "chart.js";
 // import Chart from "chart.js/auto";
@@ -21,7 +21,7 @@ const GraphicEsclerosis = () => {
     ],
     datasets: [
       {
-        label: "ESCLEROSIS",
+        label: "Afectados",
 
         backgroundColor: "black",
         borderColor: "green",
@@ -39,9 +39,11 @@ const GraphicEsclerosis = () => {
   };
 
   return (
-    <div style={{ width: "100%", height: "500px" }}>
-      <h2>AFECTADOS</h2>
-      <Bar data={data} options={opciones} />
+    <div className="general-graphic">
+      <h2>ESCLEROSIS MULTIPLE</h2>
+      <div style={{ width: "75%" }}>
+        <Bar data={data} options={opciones} />
+      </div>
     </div>
   );
 };

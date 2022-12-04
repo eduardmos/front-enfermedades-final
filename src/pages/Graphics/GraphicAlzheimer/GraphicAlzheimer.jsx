@@ -1,5 +1,4 @@
 import React from "react";
-import "./GraphicAlzheimer.scss";
 
 import { Bar } from "react-chartjs-2";
 // import { CategoryScale } from "chart.js";
@@ -22,7 +21,7 @@ const GraphicAlzheimer = () => {
     ],
     datasets: [
       {
-        label: "ELA",
+        label: "Afectados",
 
         backgroundColor: "black",
         borderColor: "green",
@@ -40,9 +39,11 @@ const GraphicAlzheimer = () => {
   };
 
   return (
-    <div style={{ width: "100%", height: "500px" }}>
-      <h2>AFECTADOS</h2>
-      <Bar data={data} options={opciones} />
+    <div className="general-graphic">
+      <h2>ALZHEIMER</h2>
+      <div style={{ width: "75%" }}>
+        <Bar data={data} options={opciones} />
+      </div>
     </div>
   );
 };

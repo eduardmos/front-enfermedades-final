@@ -27,9 +27,9 @@ const DiseasesCreate = () => {
   };
 
   return (
-    <div>
+    <div className="form-create-diseases">
       <h2>Nueva Enfermedad</h2>
-      <form onSubmit={handleSubmit(createDiseases)}>
+      <form className="form--box" onSubmit={handleSubmit(createDiseases)}>
         <label>
           Nombre
           <input type="text" name="name" {...register("name")}></input>

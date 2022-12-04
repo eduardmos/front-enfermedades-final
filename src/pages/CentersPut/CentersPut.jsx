@@ -38,10 +38,10 @@ const CentersPut = () => {
   };
 
   return (
-    <div>
+    <div className="form-centers-put">
       <h2>Edita el Centro</h2>
       {center && (
-        <form onSubmit={handleSubmit(editCenters)}>
+        <form className="form--box" onSubmit={handleSubmit(editCenters)}>
           <label>
             Nombre
             <input

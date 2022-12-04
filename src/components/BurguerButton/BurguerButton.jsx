@@ -1,9 +1,12 @@
 import React from "react";
 import "./BurguerButton.scss";
 
-function BurguerButton() {
+function BurguerButton(props) {
   return (
-    <div className="nav-icon">
+    <div
+      onClick={props.handleClick}
+      className={`nav-icon ${props.clicked ? "open" : ""}`}
+    >
       <span></span>
       <span></span>
       <span></span>

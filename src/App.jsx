@@ -19,6 +19,7 @@ import DiseasesPut from "./pages/DiseasesPut/DiseasesPut";
 import CentersDetails from "./pages/CentersDetail/CentersDetail";
 import CentersPut from "./pages/CentersPut/CentersPut";
 import CentersCreate from "./pages/CentersCreate/CentersCreate";
+import GraphicsPage from "./pages/Graphics/GraphicsPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ function App() {
           <Route path="specialists/:id" element={<SpecialistsDetails />} />
           <Route path="specialistsCreate" element={<SpecialistsCreate />} />
           <Route path="specialistsPut/edit/:id" element={<SpecialistsPut />} />
+          <Route path="graphics" element={<GraphicsPage />} />
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="aboutus" element={<AboutUs />} />

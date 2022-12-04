@@ -23,19 +23,22 @@ const Specialists = () => {
   const isAdmin = user && user.rol === "admin";
 
   return (
-    <div>
+    <div className="specialists-box">
       {isAdmin && (
-        <div>
+        <div className="button-Specialist-Create">
           <NavLink to={"/specialistsCreate"}>+</NavLink>
         </div>
       )}
       <div className="search-specialist">
-        <input
-          type="text"
-          placeholder="Search..."
-          className="button-search-on"
-          onChange={(e) => setQuery(e.target.value)}
-        ></input>
+        <label>
+          <h6> Encuentra al profesional que más se adapte a ti </h6>
+          <input
+            type="text"
+            placeholder="Buscar..."
+            className="button-search-on"
+            onChange={(e) => setQuery(e.target.value)}
+          ></input>
+        </label>
       </div>
       {isLoading ? (
         <img
@@ -51,20 +54,21 @@ const Specialists = () => {
           )
           .map((specialist) => {
             return (
-              <div key={specialist._id}>
+              <div className="specialist-box-eachCard" key={specialist._id}>
                 <h1>{specialist.name}</h1>
                 <img src={specialist.img} alt="specialistImg"></img>
                 <p>{specialist.specialistType}</p>
                 {/* <button onClick={() => watchMore(specialist._id)}>
                 Detalles
               </button> */}
-
-                <Link
-                  to={`/specialists/${specialist._id}`}
-                  key={specialist._id}
-                >
-                  Ver Mas
-                </Link>
+                <div className="button-specialist">
+                  <Link
+                    to={`/specialists/${specialist._id}`}
+                    key={specialist._id}
+                  >
+                    Ver Mas
+                  </Link>
+                </div>
               </div>
             );
           })

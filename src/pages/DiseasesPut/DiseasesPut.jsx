@@ -39,10 +39,10 @@ const DiseasesPut = () => {
   };
 
   return (
-    <div>
+    <div className="form-specialists-put">
       <h2>Edita la enfermedad</h2>
       {disease && (
-        <form onSubmit={handleSubmit(editDiseases)}>
+        <form className="form--box" onSubmit={handleSubmit(editDiseases)}>
           <label>
             Nombre
             <input
