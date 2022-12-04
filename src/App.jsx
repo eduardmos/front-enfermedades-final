@@ -32,24 +32,23 @@ function App() {
     <div className="App">
       <Navbar />
       <main>
-      <Routes>
-        <Route path="" element={<Home />} />
-        <Route path="diseases" element={<Diseases />} />
-
-        <Route path="diseasesCreate" element={<DiseasesCreate />} />
-        <Route path="diseasesPut/edit/:id" element={<DiseasesPut />} />
-        <Route path="centers" element={<Centers />} />
-        <Route path="centers/:id" element={<CentersDetails />} />
-        <Route path="centersCreate" element={<CentersCreate />} />
-        <Route path="centersPut/edit/:id" element={<CentersPut />} />
-        <Route path="specialists" element={<Specialists />} />
-        <Route path="specialists/:id" element={<SpecialistsDetails />} />
-        <Route path="specialistsCreate" element={<SpecialistsCreate />} />
-        <Route path="specialistsPut/edit/:id" element={<SpecialistsPut />} />
-        <Route path="register" element={<Register />} />
-        <Route path="login" element={<Login />} />
-        <Route path="aboutus" element={<AboutUs />} />
-      </Routes>
+        <Routes>
+          <Route path="" element={<Home />} />
+          <Route path="diseases" element={<Diseases />} />
+          <Route path="diseasesCreate" element={<DiseasesCreate />} />
+          <Route path="diseasesPut/edit/:id" element={<DiseasesPut />} />
+          <Route path="centers" element={<Centers />} />
+          <Route path="centers/:id" element={<CentersDetails />} />
+          <Route path="centersCreate" element={<CentersCreate />} />
+          <Route path="centersPut/edit/:id" element={<CentersPut />} />
+          <Route path="specialists" element={<Specialists />} />
+          <Route path="specialists/:id" element={<SpecialistsDetails />} />
+          <Route path="specialistsCreate" element={<SpecialistsCreate />} />
+          <Route path="specialistsPut/edit/:id" element={<SpecialistsPut />} />
+          <Route path="register" element={<Register />} />
+          <Route path="login" element={<Login />} />
+          <Route path="aboutus" element={<AboutUs />} />
+        </Routes>
       </main>
     </div>
   );

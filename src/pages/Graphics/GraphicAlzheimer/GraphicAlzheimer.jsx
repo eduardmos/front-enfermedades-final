@@ -22,7 +22,7 @@ const GraphicAlzheimer = () => {
     ],
     datasets: [
       {
-        label: "PARKINSON",
+        label: "ELA",
 
         backgroundColor: "black",
         borderColor: "green",

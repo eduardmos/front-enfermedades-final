@@ -21,7 +21,7 @@ const GraphicEsclerosis = () => {
     ],
     datasets: [
       {
-        label: "PARKINSON",
+        label: "ESCLEROSIS",
 
         backgroundColor: "black",
         borderColor: "green",

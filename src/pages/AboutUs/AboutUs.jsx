@@ -3,7 +3,7 @@ import "./AboutUs.scss"
 
 const Nosotros = () => {
   return (
-    <div>Nosotros</div>
+    <div></div>
   )
 }
 

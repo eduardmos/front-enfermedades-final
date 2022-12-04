@@ -21,13 +21,16 @@ const Register = () => {
   };
 
   return (
-    <form className="registerForm" onSubmit={handleSubmit(registerUser)}>
+    <div  className="form-register" >
+      
+
+    <form className="form--box" onSubmit={handleSubmit(registerUser)}>
       <label>
-        User name
+        <h6>User name</h6>
         <input type="text" {...register("name", { required: true })} />
       </label>
       <label>
-        Email
+        <h6>Email</h6>
         <input
           type="text"
           name="email"
@@ -52,7 +55,7 @@ const Register = () => {
         </>
       ) : null}
       <label>
-        Password
+        <h6>Password</h6>
         <input
           type="password"
           name="pasword"
@@ -67,6 +70,7 @@ const Register = () => {
 
       <button disabled={!isValid}>Enviar</button>
     </form>
+   </div>
   );
 };
 

@@ -20,7 +20,8 @@ const Login = () => {
   };
 
   return (
-    <form className="loginForm" onSubmit={handleSubmit(login)}>
+    <div className="form-login">
+    <form className="form--box" onSubmit={handleSubmit(login)}>
       <label>
         <h6>Email</h6>
         <input
@@ -60,6 +61,7 @@ const Login = () => {
 
       <button disabled={!isValid}>Enviar</button>
     </form>
+    </div>
   );
 };
 

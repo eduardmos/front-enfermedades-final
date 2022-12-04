@@ -1,4 +1,5 @@
 import React from "react";
+import "./SpecialistsCreate.scss"
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
@@ -26,9 +27,9 @@ const SpecialistsCreate = () => {
   };
 
   return (
-    <div>
-      <h2>Nuevo Especialista</h2>
-      <form onSubmit={handleSubmit(createSpecialists)}>
+    <div className="form-create-specialists">
+      <h2>Añadir un nuevo especialista</h2>
+      <form className="form--box" onSubmit={handleSubmit(createSpecialists)}>
         <label>
           Nombre
           <input type="text" name="name" {...register("name")}></input>

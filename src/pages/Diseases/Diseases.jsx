@@ -26,7 +26,7 @@ const Diseases = () => {
   const isAdmin = user && user.rol === "admin";
 
   return (
-    <div>
+    <div className="diseases-box">
       {isAdmin && (
         <div>
           <NavLink to={"/diseasesCreate"}>+</NavLink>
@@ -40,7 +40,7 @@ const Diseases = () => {
       ) : !error ? (
         diseases.map((disease) => {
           return (
-            <div key={disease._id}>
+            <div className="diseases-box-eachCard" key={disease._id}>
               <div>
                 <h1>{disease.name}</h1>
                 <p>{disease.description}</p>

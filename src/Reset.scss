@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -22,7 +23,9 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
-	font-family: pixel;
+	font-family: 'M PLUS Rounded 1c', sans-serif;
+	// font-family: pixel;
+	width: 100%;
 	
 }
 /* HTML5 display-role reset for older browsers */
