@@ -9,7 +9,7 @@ import styled from "styled-components";
 const Navbar = () => {
   const { user } = useSelector((state) => state.auth);
   const [clicked, setCliked] = useState(false);
-  console.log(clicked);
+  // console.log(clicked);
   const handleClick = () => {
     if (window.innerWidth < 768) {
       //cuando esta true lo pasa a false y viceversa
@@ -74,7 +74,7 @@ export default Navbar;
 
 const NavContainer = styled.nav`
   ${"" /* Barra en general, incluye el menu hamburguesa y lo que lo cierra */}
-  background-color: black;
+  background-color: #2A2C3A;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -133,9 +133,8 @@ const NavContainer = styled.nav`
     left: 0;
     right: 0;
     text-align: center;
-    border: 2px solid red;
     .ab {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-top: 1rem;
       color: white;
     }
@@ -149,7 +148,7 @@ const NavContainer = styled.nav`
 
 //Cuadro desplegable de la hamburguesa
 const BgDiv = styled.div`
-  background-color: #222;
+  background-color: #2a2c3a;
   position: absolute;
   top: -1000px;
   left: -1000px;

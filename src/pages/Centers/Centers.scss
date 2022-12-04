@@ -12,18 +12,24 @@
     padding: 0.2em;
   }
   .center-box-eachCard {
-    img {
-      width: 20em;
-      border-radius: 5px;
-    }
-    text-transform: uppercase;
-    height: 20em;
-    width: 23em;
+    // text-transform: uppercase;
+    font-size: 17px;
+    height: 35em;
+    width: 100%;
     background-color: #455d7a;
     border: 1px solid #233142;
     color: white;
     margin: 1em;
     border-radius: 5px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
   }
 
   .button-center {
