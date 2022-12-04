@@ -1,11 +1,11 @@
 import { Routes, Route, useNavigate } from "react-router-dom";
-import "./App.css";
+import "./App.scss";
 import Home from "./pages/Home/Home";
 import Diseases from "./pages/Diseases/Diseases";
 import Centers from "./pages/Centers/Centers";
 import Register from "./pages/Register/Register";
 import Login from "./pages/Login/Login";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar/Navbar";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Specialists from "./pages/Specialists/Specialists";
 import { useDispatch } from "react-redux";
@@ -31,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <main>
       <Routes>
         <Route path="" element={<Home />} />
         <Route path="diseases" element={<Diseases />} />
@@ -49,6 +50,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="aboutus" element={<AboutUs />} />
       </Routes>
+      </main>
     </div>
   );
 }
