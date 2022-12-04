@@ -31,7 +31,7 @@ const Specialists = () => {
       )}
       <div className="search-specialist">
         <label>
-          <h6> Encuentra al profesional que más se adapte a ti </h6>
+          <h6 className="input-text"> Encuentra al profesional que más se adapte a ti </h6>
           <input
             type="text"
             placeholder="Buscar..."

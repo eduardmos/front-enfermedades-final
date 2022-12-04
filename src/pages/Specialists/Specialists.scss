@@ -8,11 +8,15 @@
   color: #e3e3e3;
 
   .search-specialist {
+    .input-text{
+      color: #233142;
+    }
     width: 100%;
     height: 40px;
     padding: 0.2em;
   }
   .specialist-box-eachCard {
+    color: white;
     img {
       width: 20em;
       border-radius: 5px;
@@ -21,7 +25,7 @@
     height: 20em;
     width: 23em;
     background-color: #455d7a;
-    border: 1px solid #233142;
+    border: 2px solid #233142;
     margin: 1em;
     border-radius: 5px;
   }

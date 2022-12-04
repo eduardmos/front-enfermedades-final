@@ -24,13 +24,15 @@ const Navbar = () => {
           <NavLink to="" className={"ab"}>
             Icono
           </NavLink>
-          <NavLink>Titulo</NavLink>
+          <NavLink to="" className={"ab"}>
+            Titulo
+          </NavLink>
 
           <NavLink to="specialists" onClick={handleClick} className={"ab"}>
             Especialistas
           </NavLink>
 
-          <NavLink onClick={handleClick} to="/centers">
+          <NavLink onClick={handleClick} to="/centers" className={"ab"}>
             Centros
           </NavLink>
           <NavLink onClick={handleClick} to="aboutus" className={"ab"}>
@@ -71,23 +73,28 @@ const Navbar = () => {
 export default Navbar;
 
 const NavContainer = styled.nav`
+  ${"" /* Barra en general, incluye el menu hamburguesa y lo que lo cierra */}
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+
   h2 {
     color: white;
     font-weight: 400;
+
     span {
       font-weight: bold;
     }
   }
-  padding: 0.4rem;
-  background-color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  a {
+
+  .ab {
     color: white;
     text-decoration: none;
     margin-right: 1rem;
   }
+  ${"" /* Links que se ven en el cuadro desplegable de la hamburguesa */}
   .links {
     position: absolute;
     top: -700px;
@@ -97,7 +104,9 @@ const NavContainer = styled.nav`
     margin-right: auto;
     text-align: center;
     transition: all 0.5s ease;
-    a {
+    z-index: 2;
+
+    .ab {
       color: white;
       font-size: 2rem;
       display: block;
@@ -105,7 +114,8 @@ const NavContainer = styled.nav`
     @media (min-width: 768px) {
       position: initial;
       margin: 0;
-      a {
+
+      .ab {
         font-size: 1rem;
         color: white;
         display: inline;
@@ -119,11 +129,12 @@ const NavContainer = styled.nav`
     position: absolute;
     margin-left: auto;
     margin-right: auto;
-    top: 30%;
+    top: 10%;
     left: 0;
     right: 0;
     text-align: center;
-    a {
+    border: 2px solid red;
+    .ab {
       font-size: 2rem;
       margin-top: 1rem;
       color: white;
@@ -136,6 +147,7 @@ const NavContainer = styled.nav`
   }
 `;
 
+//Cuadro desplegable de la hamburguesa
 const BgDiv = styled.div`
   background-color: #222;
   position: absolute;
