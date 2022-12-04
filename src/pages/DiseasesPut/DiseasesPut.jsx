@@ -1,4 +1,5 @@
 // import React, { useEffect } from "react";
+import "./DiseasesPut.scss";
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";

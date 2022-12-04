@@ -1,4 +1,5 @@
 // import React, { useEffect } from "react";
+import "./CentersPut.scss";
 import { useForm } from "react-hook-form";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
