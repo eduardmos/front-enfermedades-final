@@ -20,25 +20,24 @@ const Navbar = () => {
   return (
     <>
       <NavContainer>
-        <img
-          src="https://res.cloudinary.com/dt1kuzdty/image/upload/v1670197905/proyecto-diseases/logooo_cbvz4q.png"
-          alt="cerebro"
-        ></img>
+        <NavLink to="" className={"ab"}>
+          <img
+            className="logoNavbar"
+            src="https://res.cloudinary.com/dt1kuzdty/image/upload/v1670236000/proyecto-diseases/logosimplementepro_xkd69p.png"
+            alt="cerebro"
+          ></img>
+        </NavLink>
         <div className={`links ${clicked ? "active" : ""}`}>
-          <NavLink to="" className={"ab"}></NavLink>
-          <NavLink to="" className={"ab"}>
-            SimpleMente
-          </NavLink>
-
-          <NavLink to="specialists" onClick={handleClick} className={"ab"}>
-            Especialistas
-          </NavLink>
-
+          {user && (
+            <NavLink to="specialists" onClick={handleClick} className={"ab"}>
+              Especialistas
+            </NavLink>
+          )}
           <NavLink onClick={handleClick} to="/centers" className={"ab"}>
             Centros
           </NavLink>
           <NavLink onClick={handleClick} to="aboutus" className={"ab"}>
-            About Us
+            Nosotros
           </NavLink>
           {user && (
             <NavLink onClick={handleClick} to="graphics" className={"ab"}>

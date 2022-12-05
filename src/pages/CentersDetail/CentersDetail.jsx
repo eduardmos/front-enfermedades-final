@@ -8,23 +8,20 @@ import {
   getByIdCenters,
 } from "../../redux/centers/centers.functions";
 import "./CentersDetail.scss";
+import CustomButton from "../../components/CustomButton/CustomButton";
 const CentersDetail = () => {
   const { id } = useParams();
-  //Aqui llega la id
-  // console.log(id);
+
   let navigate = useNavigate();
   const dispatch = useDispatch();
 
   const { center, isLoading, error } = useSelector((state) => state.centers);
-  console.log(center);
-  //A esta funcion no llega
+
   const deleteCenter = (id) => {
-    // console.log("Hola", id);
     dispatch(deleteCenters(id, navigate));
   };
 
   useEffect(() => {
-    // console.log("a", id);
     dispatch(getByIdCenters(id));
   }, []);
 
@@ -41,15 +38,32 @@ const CentersDetail = () => {
       ) : !error ? (
         <div className="center-box" key={center._id}>
           <h1>{center.name}</h1>
-          <p>Id:{center._id}</p>
           <img src={center.img} alt="imagen"></img>
           <p>{center.location}</p>
           <p>{center.schedule}</p>
           {isAdmin && (
             <>
-              <button onClick={() => deleteCenter(center._id)}>Eliminar</button>
+              <CustomButton
+                funcion={() => deleteCenter(center._id)}
+                text={
+                  <img
+                    src="https://cdn-icons-png.flaticon.com/512/58/58326.png"
+                    alt="papelera"
+                    className="papelera"
+                  ></img>
+                }
+              ></CustomButton>
+
               <Link to={`/centersPut/edit/${center._id}`} key={center._id}>
-                Edita
+                <CustomButton
+                  text={
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/512/3597/3597088.png"
+                      alt="papelera"
+                      className="papelera"
+                    ></img>
+                  }
+                />
               </Link>
             </>
           )}

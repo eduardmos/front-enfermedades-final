@@ -5,7 +5,7 @@ nav {
   align-items: center;
   font-size: 25px;
   width: 100%;
-  height: 10vh;
+  height: 14vh;
   font-size: small;
   font-family: "Poppins", sans-serif;
 
@@ -13,10 +13,12 @@ nav {
     color: white;
     text-decoration: none;
     margin-right: 1rem;
+    width: auto;
   }
 }
 
-img {
+.logoNavbar {
+  padding-left: 20%;
   width: 130px;
 }
 

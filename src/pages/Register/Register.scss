@@ -1,9 +1,9 @@
 .form-register {
-  background: rgba(99, 119, 252, 0.06);
-  box-shadow: 20px 20px 22px rgba(71, 66, 100, 0.105);
+  background: rgba(27, 33, 62, 0.242);
+  box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.196);
   // backdrop-filter: blur(40px);
   // mix-blend-mode: hard-light;
-  border: 1px solid rgba(67, 61, 91, 0.006);
+  // border: 1px solid rgba(67, 61, 91, 0.006);
   border-radius: 25px;
   display: flex;
   flex-direction: column;
@@ -14,7 +14,7 @@
   padding: 1em;
   h6 {
     text-align: center;
-    color: #080e21;
+    color: #ffffff;
   }
   .form--box {
     display: flex;

@@ -42,31 +42,35 @@ const SpecialistsDetails = () => {
           alt="loading"
         />
       ) : !error ? (
-        <div className="specialist-box" key={specialist._id}>
-          <h1>{specialist.name}</h1>
-          <p className="surname">{specialist.surname}</p>
-          <p>{specialist.age}</p>
-          <img src={specialist.img} alt="imagen"></img>
-          <p>{specialist.specialistType}</p>
-          <p>Ubicación: {specialist.location}</p>
-          <p>Horario: {specialist.schedule}</p>
+        <div className="specialist-box">
+          <div>
+            <img src={specialist.img} alt="imagen"></img>
+          </div>
+          <div key={specialist._id}>
+            <h1> {specialist.name}</h1>
+            <h1>{specialist.surname}</h1>
+            <p> Edad: {specialist.age}</p>
+            <p>Especialización:{specialist.specialistType}</p>
+            <p>Ubicación: {specialist.location}</p>
+            <p>Horario: {specialist.schedule}</p>
 
-          {isAdmin && (
-            <>
-              <button onClick={() => deleteSpecialist(specialist._id)}>
-                Eliminar
-              </button>
-              {/* <button onClick={() => putSpecialist(specialist._id)}>
+            {isAdmin && (
+              <>
+                <button onClick={() => deleteSpecialist(specialist._id)}>
+                  Eliminar
+                </button>
+                {/* <button onClick={() => putSpecialist(specialist._id)}>
                 Edita
               </button> */}
-              <Link
-                to={`/specialistsPut/edit/${specialist._id}`}
-                key={specialist._id}
-              >
-                Edita
-              </Link>
-            </>
-          )}
+                <Link
+                  to={`/specialistsPut/edit/${specialist._id}`}
+                  key={specialist._id}
+                >
+                  Edita
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       ) : (
         <div>

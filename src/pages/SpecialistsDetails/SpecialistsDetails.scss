@@ -1,7 +1,14 @@
 .first-box-specialist {
   background-color: #455d7a;
   border: 1px solid #233142;
-  color: white
+  color: white;
+  padding-top: 10%;
+  padding-bottom: 10%;
+
+  .specialist-box {
+    display: flex;
+    align-items: center;
+  }
 }
 
 h1 {

@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getSpecialists } from "../../redux/specialists/specialists.functions";
 import { Link, NavLink } from "react-router-dom";
 import Select from "react-select";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const Specialists = () => {
   const dispatch = useDispatch();
@@ -19,43 +20,37 @@ const Specialists = () => {
     dispatch(getSpecialists());
   }, []);
 
-  // const [query, setQuery] = useState("");
   const { user } = useSelector((state) => state.auth);
   const isAdmin = user && user.rol === "admin";
 
-  const suppliers = [
-    { name: "Fisioterapeuta" },
-    { name: "Auxiliar de Enfermeria" },
-    { name: "Terapeuta" },
-    { name: "Psicologo Especializado" },
-    { name: "Logopeda" },
-  ];
-
-  const [selectedSupplier, setSelectedSupplier] = useState();
-
-  const handleSelectChange = ({ value }) => {
-    console.log(value);
-    setSelectedSupplier(value);
-  };
-
+  const [query, setQuery] = useState("");
   return (
     <div className="specialists-box">
       {isAdmin && (
         <div className="button-Specialist-Create">
-          <NavLink to={"/specialistsCreate"}>+</NavLink>
+          <NavLink to={"/specialistsCreate"}>
+            <CustomButton text="CREAR ESPECIALISTA" />
+          </NavLink>
         </div>
       )}
       <div className="search-specialist">
         <label>
           <h6 className="input-text">
-            Encuentra al profesional que más se adapte a ti{" "}
+            Encuentra al profesional que más se adapte a ti
           </h6>
-          <div>
-            <p>Especialista: {selectedSupplier}</p>
-            <Select
-              options={suppliers.map((sup) => ({ label: sup.name }))}
-              onChange={handleSelectChange}
-            />
+          <div className="search-center">
+            <select
+              type="text"
+              defaultValue={"Default"}
+              className="button-search-on"
+              onChange={(e) => setQuery(e.target.value.toLowerCase())}
+            >
+              <option>Fisioterapeuta</option>
+              <option>Auxiliar de Enfermeria</option>
+              <option>Psicologo Especializado</option>
+              <option>Terapeuta</option>
+              <option>Logopeda</option>
+            </select>
           </div>
         </label>
       </div>
@@ -65,26 +60,30 @@ const Specialists = () => {
           alt="loading"
         />
       ) : !error ? (
-        specialists.map((specialist) => {
-          return (
-            <div className="specialist-box-eachCard" key={specialist._id}>
-              <h1>{specialist.name}</h1>
-              <img src={specialist.img} alt="specialistImg"></img>
-              <p>{specialist.specialistType}</p>
-              {/* <button onClick={() => watchMore(specialist._id)}>
+        specialists
+          .filter((specialist) =>
+            specialist.specialistType.toLowerCase().includes(query)
+          )
+          .map((specialist) => {
+            return (
+              <div className="specialist-box-eachCard" key={specialist._id}>
+                <h1>{specialist.name}</h1>
+                <img src={specialist.img} alt="specialistImg"></img>
+                <p>{specialist.specialistType}</p>
+                {/* <button onClick={() => watchMore(specialist._id)}>
                 Detalles
               </button> */}
-              <div className="button-specialist">
-                <Link
-                  to={`/specialists/${specialist._id}`}
-                  key={specialist._id}
-                >
-                  Ver Mas
-                </Link>
+                <div className="button-specialist">
+                  <Link
+                    to={`/specialists/${specialist._id}`}
+                    key={specialist._id}
+                  >
+                    Ver Mas
+                  </Link>
+                </div>
               </div>
-            </div>
-          );
-        })
+            );
+          })
       ) : (
         <div>
           <h3>{error}</h3>

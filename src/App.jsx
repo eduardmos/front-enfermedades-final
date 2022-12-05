@@ -20,6 +20,7 @@ import CentersDetails from "./pages/CentersDetail/CentersDetail";
 import CentersPut from "./pages/CentersPut/CentersPut";
 import CentersCreate from "./pages/CentersCreate/CentersCreate";
 import GraphicsPage from "./pages/Graphics/GraphicsPage";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const dispatch = useDispatch();
@@ -52,6 +53,7 @@ function App() {
           <Route path="aboutus" element={<AboutUs />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   );
 }

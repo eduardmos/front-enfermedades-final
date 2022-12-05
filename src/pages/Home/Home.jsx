@@ -9,22 +9,35 @@ import "./Home.scss";
 const Home = () => {
   // const { user } = useSelector((state) => state.auth);
 
+  const { user } = useSelector((state) => state.auth);
+
   return (
     <div className="container-general">
       <div className="containerimg">
-        <NavLink to="/specialists">
-          <CustomButton text="Especialistas" />
-        </NavLink>
-        <NavLink to="/centers">
-          <CustomButton text="Centers" />
-        </NavLink>
-
-        <img
-          src="https://res.cloudinary.com/dt1kuzdty/image/upload/v1670196156/proyecto-diseases/change_ifoep6.jpg"
-          alt="imagenentrada"
-          width="100%"
-          height="auto"
-        />
+        <h2 className="textHomeInitial">
+          somos un punto de informacion y de encuentro entre especilistas y
+          pacientes en enfermedades neurodegenerativas
+        </h2>
+        {!user && (
+          <>
+            <NavLink to="/login" className="navlink-page">
+              <CustomButton text="Especialistas" />
+            </NavLink>
+            <NavLink to="/centers" className="navlink-page">
+              <CustomButton text="Centers" />
+            </NavLink>
+          </>
+        )}
+        {user && (
+          <>
+            <NavLink to="/specialists" className="navlink-page">
+              <CustomButton text="Especialistas" />
+            </NavLink>
+            <NavLink to="/centers" className="navlink-page">
+              <CustomButton text="Centers" />
+            </NavLink>
+          </>
+        )}
       </div>
       <Diseases />
     </div>

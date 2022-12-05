@@ -3,6 +3,7 @@ import "./Centers.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getCenters } from "../../redux/centers/centers.functions";
 import { Link, NavLink } from "react-router-dom";
+import CustomButton from "../../components/CustomButton/CustomButton";
 const Centers = () => {
   const dispatch = useDispatch();
   const { centers, isLoading, error } = useSelector((state) => state.centers);
@@ -19,13 +20,15 @@ const Centers = () => {
     <div className="center-box">
       {isAdmin && (
         <div className="button-center-Create">
-          <NavLink to={"/centersCreate"}>+ </NavLink>
+          <NavLink to={"/centersCreate"}>
+            <CustomButton text="CREAR CENTRO" />
+          </NavLink>
         </div>
       )}
       <div className="search-center">
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Busca tu provincia..."
           className="button-search-on"
           onChange={(e) => setQuery(e.target.value)}
         ></input>

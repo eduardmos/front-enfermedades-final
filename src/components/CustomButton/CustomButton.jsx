@@ -1,8 +1,12 @@
 import React from "react";
 import "./CustomButton.scss";
 
-const CustomButton = ({ text }) => {
-  return <button className="bn632-hover bn24">{text}</button>;
+const CustomButton = ({ text, funcion, buttonTypeClass }) => {
+  return (
+    <button className={buttonTypeClass} onClick={funcion}>
+      {text}
+    </button>
+  );
 };
 
 export default CustomButton;

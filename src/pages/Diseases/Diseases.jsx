@@ -45,9 +45,15 @@ const Diseases = () => {
           return (
             <div className="diseases-box-eachCard" key={disease._id}>
               <div>
-                <h1>{disease.name}</h1>
+                <h1 className="titleDiseases">{disease.name}</h1>
                 <p>{disease.description}</p>
-                <img src={disease.img} alt={disease.name}></img>
+
+                <img
+                  className="boximagediseases"
+                  src={disease.img}
+                  alt={disease.name}
+                ></img>
+
                 <p>{disease.symptoms}</p>
                 <p>{disease.treatment}</p>
                 <p>{disease.mortality}</p>
@@ -57,6 +63,7 @@ const Diseases = () => {
                 <>
                   <CustomButton
                     text="Eliminar"
+                    buttonTypeClass="delete custom"
                     onClick={() => toDeleteDiseases(disease._id)}
                   ></CustomButton>
                   {/* <button onClick={() => toDeleteDiseases(disease._id)}>
@@ -69,7 +76,10 @@ const Diseases = () => {
                     to={`diseasesPut/edit/${disease._id}`}
                     key={disease._id}
                   >
-                    <CustomButton text="Editar"></CustomButton>
+                    <CustomButton
+                      text="Editar"
+                      buttonTypeClass="normal custom"
+                    ></CustomButton>
                   </Link>
                 </>
               )}

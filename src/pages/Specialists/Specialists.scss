@@ -8,18 +8,27 @@
   color: #e3e3e3;
 
   .search-specialist {
-    .input-text{
+    width: 100%;
+    height: 12vh;
+    padding: 0.2em;
+
+    .input-text {
       color: #233142;
     }
-    width: 100%;
-    height: 40px;
-    padding: 0.2em;
+
+    .search-center {
+      margin-bottom: 1em;
+    }
   }
   .specialist-box-eachCard {
     color: white;
+
     img {
-      width: 20em;
       border-radius: 5px;
+      object-fit: contain;
+      object-position: center;
+      width: 100%;
+      height: 65%;
     }
     text-transform: uppercase;
     height: 20em;

@@ -1,17 +1,51 @@
 .diseases-box {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+  padding-top: 10%;
+  -webkit-transform: translate(-5%, -5%);
+  -ms-transform: translate(-5%, -5%);
+  transform: translate(0%, 0%);
   width: 100%;
+  max-width: 95%;
+  height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  gap: 20px;
   // background-color: red;
 
   .diseases-box-eachCard {
-    height: 90em;
-    width: 23em;
-    margin-bottom: 1em;
-    background-color: blue;
+    display: block;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    padding: 3%;
+    color: white;
+    height: 1100px;
+    width: 500px;
+    background: rgba(27, 33, 62, 0.242);
+    box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.153);
+    border-radius: 1.563em;
+    align-content: center;
+
     // padding: 1em;
   }
+}
+
+.boximagediseases {
+  width: 300px;
+  padding: 4%;
+}
+.titleDiseases {
+  padding-bottom: 3%;
+  text-transform: lowercase;
+  text-transform: capitalize;
 }
