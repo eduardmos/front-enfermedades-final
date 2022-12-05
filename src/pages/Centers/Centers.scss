@@ -14,7 +14,7 @@
   .center-box-eachCard {
     // text-transform: uppercase;
     font-size: 17px;
-    height: 35em;
+    height: 20em;
     width: 100%;
     background-color: #455d7a;
     border: 1px solid #233142;
@@ -28,11 +28,14 @@
 
     img {
       width: 100%;
-      border-radius: 5px;
+      height: 40%;
+      object-fit: cover;
+      object-position: unset;
     }
   }
 
   .button-center {
+    padding-top: 2em;
     a {
       text-decoration: none;
       color: black;

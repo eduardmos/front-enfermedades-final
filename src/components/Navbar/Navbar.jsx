@@ -20,12 +20,14 @@ const Navbar = () => {
   return (
     <>
       <NavContainer>
+        <img
+          src="https://res.cloudinary.com/dt1kuzdty/image/upload/v1670197905/proyecto-diseases/logooo_cbvz4q.png"
+          alt="cerebro"
+        ></img>
         <div className={`links ${clicked ? "active" : ""}`}>
+          <NavLink to="" className={"ab"}></NavLink>
           <NavLink to="" className={"ab"}>
-            Icono
-          </NavLink>
-          <NavLink to="" className={"ab"}>
-            Titulo
+            SimpleMente
           </NavLink>
 
           <NavLink to="specialists" onClick={handleClick} className={"ab"}>
