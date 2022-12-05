@@ -33,7 +33,7 @@ const Navbar = () => {
               Especialistas
             </NavLink>
           )}
-          <NavLink onClick={handleClick} to="/centers" className={"ab"}>
+          <NavLink onClick={handleClick} to="centers" className={"ab"}>
             Centros
           </NavLink>
           <NavLink onClick={handleClick} to="aboutus" className={"ab"}>
@@ -149,7 +149,7 @@ const NavContainer = styled.nav`
 
 //Cuadro desplegable de la hamburguesa
 const BgDiv = styled.div`
-  background-color: #2a2c3a;
+  background-color: #1D2233;
   position: absolute;
   top: -1000px;
   left: -1000px;

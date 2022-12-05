@@ -5,20 +5,22 @@
   align-items: center;
   flex-direction: column;
   width: 100%;
-  //   background-color: red;
 
   .about-project {
-    width: 35vh;
+    width: 80vw;
     line-height: 20px;
     background: rgba(27, 33, 62, 0.242);
     box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
     margin: 5% auto;
     padding: 1em;
     border-radius: 1.563em;
+
     h1 {
       padding-top: 5%;
+      padding-bottom: 5%;
       font-size: 150%;
     }
+
     p {
       font-size: 18px;
       line-height: 40px;
@@ -26,7 +28,7 @@
   }
 
   .about-us-box {
-    width: 30vh;
+    width: 30vw;
     h3 {
       padding-top: 15px;
       padding-bottom: 20px;

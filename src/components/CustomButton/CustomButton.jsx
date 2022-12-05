@@ -3,18 +3,25 @@ import "./CustomButton.scss";
 
 const CustomButton = ({
   text,
-  funcion,
+  buttonFunction,
   buttonTypeClass,
   buttonHeight,
-  size,
+  buttonWidth,
 }) => {
   return (
     <button
       className={buttonTypeClass}
-      onClick={funcion}
+      onClick={buttonFunction}
       style={{
         height: buttonHeight,
-        width: size === "xl" ? "300px" : size === "l" ? "200px" : "100px",
+        width:
+          buttonWidth === "xl"
+            ? "300px"
+            : buttonWidth === "l"
+            ? "170px"
+            : buttonWidth === "xs"
+            ? "50px"
+            : "72px",
       }}
     >
       {text}

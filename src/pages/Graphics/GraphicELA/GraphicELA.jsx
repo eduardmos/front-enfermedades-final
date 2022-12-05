@@ -23,15 +23,38 @@ const GraphicELA = () => {
       {
         label: "Afectados",
 
-        backgroundColor: "black",
+        backgroundColor: "#1D2233",
         borderColor: "green",
         borderWith: 1,
-        hoverBackgroundColor: "blue",
+        hoverBackgroundColor:  "#793cae",
         hoverBackground: "green",
         data: [210, 830, 2090, 1661, 1640, 3150, 3150],
       },
     ],
   };
+  const data2 = {
+    labels: [
+      "2016",
+      "2017",
+      "2018",
+      "2019",
+      "2020",
+      "2021",
+    ],
+    datasets: [
+      {
+        label: "Mortalidad",
+
+        backgroundColor: "#1D2233",
+        borderColor: "green",
+        borderWith: 1,
+        hoverBackgroundColor:  "#793cae",
+        hoverBackground: "green",
+        data: [110, 234, 334, 121, 155, 144, 102],
+      },
+    ],
+  };
+
 
   const opciones = {
     maintainAspectRadio: false,
@@ -41,8 +64,9 @@ const GraphicELA = () => {
   return (
     <div className="general-graphic">
       <h2>ESCLEROSIS LATERAL</h2>
-      <div style={{ width: "75%" }}>
+      <div>
         <Bar data={data} options={opciones} />
+        <div className="bottom--lit"> <Bar data={data2} options={opciones} /></div>
       </div>
     </div>
   );

@@ -1,23 +1,48 @@
 .first-box-specialist {
-  background-color: #455d7a;
-  border: 1px solid #233142;
+  background: rgba(27, 33, 62, 0.242);
+  box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
+  margin: 1em;
+  border-radius: 2em;
   color: white;
   padding-top: 10%;
   padding-bottom: 10%;
+  height: 30vh;
+
+  .loading-pic {
+    height: 10vh;
+    width: 20vw;
+  }
 
   .specialist-box {
     display: flex;
     align-items: center;
+
+    .imgSpecialist {
+      margin-left: 1em;
+      border-radius: 50%;
+      background-image: linear-gradient(60deg, #2aaa8a, #4169e1);
+      padding: 3px;
+      margin-top: -80px;
+      width: 35vw;
+    }
+
+    .specialist-admin-buttons {
+      display: flex;
+
+      .papelera {
+        width: 3.5vw;
+      }
+    }
   }
 }
 
 h1 {
   font-weight: 800;
-  font-size: 35px;
+  font-size: 2em;
   text-transform: uppercase;
 }
 .surname {
   font-weight: 800;
-  font-size: 30px;
+  font-size: 1.5em;
   text-transform: uppercase;
 }

@@ -21,7 +21,12 @@ const Centers = () => {
       {isAdmin && (
         <div className="button-center-Create">
           <NavLink to={"/centersCreate"}>
-            <CustomButton text="CREAR CENTRO" />
+            <CustomButton
+              text="Añadir Centro"
+              buttonTypeClass="normal custom"
+              buttonHeight="60px"
+              buttonWidth="l"
+            />
           </NavLink>
         </div>
       )}
@@ -35,8 +40,8 @@ const Centers = () => {
       </div>
       {isLoading ? (
         <img
-          className="imgCentersCard"
-          src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
+          className="loading-pic"
+          src="https://cifras.unidadvictimas.gov.co/Cifras/images/loaderColores.gif"
           alt="loading"
         />
       ) : !error ? (
@@ -47,9 +52,19 @@ const Centers = () => {
           .map((center) => {
             return (
               <div className="center-box-eachCard" key={center._id}>
-                <img src={center.img} alt="center-img"></img>
-                <h1>{center.name}</h1>
-                <p>{center.ubication}</p>
+                {/* <img className="imgCentersCard" src={center.img} alt="center-img"></img> */}
+                <div className="boxTitleCenter">
+                  <h1 className="nameCenter">{center.name}</h1>
+                </div>
+                <div className="ubicationCenters">
+                  <img
+                    className="iconUbication"
+                    src="https://res.cloudinary.com/dt1kuzdty/image/upload/v1670266581/proyecto-diseases/ubicatioooon_av5hdn.png"
+                    alt="ubication"
+                    width="40px"
+                  />
+                  <p>{center.ubication}</p>
+                </div>
                 <div className="button-center">
                   <Link to={`/centers/${center._id}`} key={center._id}>
                     Ver más

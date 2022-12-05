@@ -3,7 +3,7 @@ import "./Specialists.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { getSpecialists } from "../../redux/specialists/specialists.functions";
 import { Link, NavLink } from "react-router-dom";
-import Select from "react-select";
+
 import CustomButton from "../../components/CustomButton/CustomButton";
 
 const Specialists = () => {
@@ -29,7 +29,9 @@ const Specialists = () => {
       {isAdmin && (
         <div className="button-Specialist-Create">
           <NavLink to={"/specialistsCreate"}>
-            <CustomButton text="CREAR ESPECIALISTA" />
+            <CustomButton text="CREAR ESPECIALISTA" buttonTypeClass="normal custom"
+                  buttonHeight="50px"
+                  buttonWidth="xl" />
           </NavLink>
         </div>
       )}
@@ -55,8 +57,8 @@ const Specialists = () => {
         </label>
       </div>
       {isLoading ? (
-        <img
-          src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
+        <img className="loading-pic"
+          src="https://cifras.unidadvictimas.gov.co/Cifras/images/loaderColores.gif"
           alt="loading"
         />
       ) : !error ? (

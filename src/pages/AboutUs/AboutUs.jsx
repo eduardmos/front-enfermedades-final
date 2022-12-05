@@ -18,7 +18,7 @@ const Nosotros = () => {
       <div className="about-us-box">
         <h3> Creado por </h3>
         <div className="aboutus-box-eachCard">
-          <h4>Frances Greoles</h4>
+          <h4>Francesc Greoles</h4>
           <a href="https://www.linkedin.com/in/francesc-greoles-a215a5152/">
             <img
               src="https://cdn-icons-png.flaticon.com/512/61/61109.png?w=360"

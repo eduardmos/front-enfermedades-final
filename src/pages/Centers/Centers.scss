@@ -5,46 +5,76 @@
   align-items: center;
   height: 100%;
   width: 50%;
-
+  .loading-pic {
+    height: 10vh;
+    width: 20vw;
+  }
   .search-center {
     width: 100%;
     height: 40px;
-    padding: 0.2em;
+    padding-top: 7%;
+    padding-bottom: 5%;
   }
   .center-box-eachCard {
-    // text-transform: uppercase;
-    font-size: 17px;
-    height: 20em;
-    position: relative;
-    background-color: rgba(27, 33, 62, 0.242);
-    box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.196);
     color: white;
-    margin: 1em;
-    border-radius: 25px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 10em;
+    width: 98vw;
+    background: rgba(27, 33, 62, 0.242);
+    box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.196);
+    border-radius: 2em;
+    margin: 1em;
 
-    h1 {
+    .boxTitleCenter {
+      background-color: aliceblue;
+      height: 10em;
+      width: 50em;
+      border-bottom-left-radius: 2em;
+      border-top-left-radius: 2em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .nameCenter {
+        text-transform: lowercase;
+        text-transform: capitalize;
+        font-size: 15px;
+      }
+    }
+
+    .ubicationCenters {
+      display: flex;
+      flex-direction: inline;
+      align-items: center;
+      width: 18em;
       font-size: 20px;
+      margin-left: 0.5em;
+      border: 2px solid red;
+
+      .iconUbication {
+        width: 10%;
+      }
     }
 
-    .imgCentersCard {
-      width: 20%;
-      height: 100%;
-      object-fit: cover;
-      object-position: unset;
-      border-radius: 25px;
-    }
-  }
+    .button-center {
+      a {
+        text-decoration: none;
 
-  .button-center {
-    padding-top: 2em;
-    a {
-      text-decoration: none;
-      color: black;
-      height: 60px;
-      width: 100px;
-      color: white;
+        height: 60px;
+        width: 100px;
+        color: white;
+      }
     }
+
+    // .imgCentersCard {
+    //   float:left;
+    //   object-fit: cover;
+    //   object-position: unset;
+    //   border-top-left-radius: 25px;
+    //   border-bottom-left-radius: 25px;
+    //   height:18em;
+    //   width: 400px;
   }
 }

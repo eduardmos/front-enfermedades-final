@@ -28,9 +28,10 @@ const GraphicsComponent = () => {
   console.log(currentPage);
   return (
     <div>
-      <section className="general-container-graphics">
-        {renderGraphic()}
+      <section className="general-container-graphics"> 
         <GraphicsPage setCurrentPage={setCurrentPage} />
+        {renderGraphic()}
+     
       </section>
     </div>
   );

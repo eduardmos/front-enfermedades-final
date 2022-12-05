@@ -22,15 +22,39 @@ const GraphicEsclerosis = () => {
     datasets: [
       {
         label: "Afectados",
-        backgroundColor: "black",
+        backgroundColor: "#1D2233",
         borderColor: "green",
         borderWith: 1,
-        hoverBackgroundColor: "blue",
+        hoverBackgroundColor:  "#793cae",
         hoverBackground: "green",
         data: [530, 2010, 3339, 3050, 3270, 3970],
       },
     ],
   };
+
+  const data2 = {
+    labels: [
+      "25 a 44 años",
+      "45 a 64 años",
+      "65 a 79 años",
+      "70 a 74 años",
+      "75 a 79 años",
+      "80 o más",
+    ],
+    datasets: [
+      {
+        label: "Mortalidad",
+        backgroundColor: "#1D2233",
+        borderColor: "green",
+        borderWith: 1,
+        hoverBackgroundColor:  "#793cae",
+        hoverBackground: "green",
+        data: [530, 2010, 3339, 3050, 3270, 3970],
+      },
+    ],
+  };
+
+
 
   const opciones = {
     maintainAspectRadio: false,
@@ -40,8 +64,10 @@ const GraphicEsclerosis = () => {
   return (
     <div className="general-graphic">
       <h2>ESCLEROSIS MULTIPLE</h2>
-      <div style={{ width: "75%" }}>
+      <div >
         <Bar data={data} options={opciones} />
+        <div className="bottom--lit">  <Bar data={data2} options={opciones} /></div>
+      
       </div>
     </div>
   );

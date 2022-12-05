@@ -21,20 +21,40 @@ const Home = () => {
         {!user && (
           <>
             <NavLink to="/login" className="navlink-page">
-              <CustomButton text="Especialistas" />
+              <CustomButton
+                text="Especialistas"
+                buttonTypeClass="normal custom"
+                buttonHeight="60px"
+                buttonWidth="xl"
+              />
             </NavLink>
             <NavLink to="/centers" className="navlink-page">
-              <CustomButton text="Centers" />
+              <CustomButton
+                text="Centros"
+                buttonTypeClass="normal custom"
+                buttonHeight="60px"
+                buttonWidth="xl"
+              />
             </NavLink>
           </>
         )}
         {user && (
           <>
             <NavLink to="/specialists" className="navlink-page">
-              <CustomButton text="Especialistas" />
+              <CustomButton
+                text="Especialistas"
+                buttonTypeClass="normal custom"
+                buttonHeight="60px"
+                buttonWidth="xl"
+              />
             </NavLink>
             <NavLink to="/centers" className="navlink-page">
-              <CustomButton text="Centers" />
+              <CustomButton
+                text="Centros"
+                buttonTypeClass="normal custom"
+                buttonHeight="60px"
+                buttonWidth="xl"
+              />
             </NavLink>
           </>
         )}

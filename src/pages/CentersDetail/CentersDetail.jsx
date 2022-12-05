@@ -32,15 +32,18 @@ const CentersDetail = () => {
     <div className="first-center-box">
       {isLoading ? (
         <img
-          src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
+          className="loading-pic"
+          src="https://cifras.unidadvictimas.gov.co/Cifras/images/loaderColores.gif"
           alt="loading"
         />
       ) : !error ? (
         <div className="center-box" key={center._id}>
           <h1>{center.name}</h1>
           <img src={center.img} alt="imagen"></img>
-          <p>{center.location}</p>
-          <p>{center.schedule}</p>
+          <p>{center.description}</p>
+          <p>{center.ubication}</p>
+          <p>Número de Teléfono{center.number}</p>
+          <p>Horario {center.schedule}</p>
           {isAdmin && (
             <>
               <CustomButton
@@ -52,6 +55,9 @@ const CentersDetail = () => {
                     className="papelera"
                   ></img>
                 }
+                buttonTypeClass="delete custom"
+                buttonHeight="50px"
+                buttonWidth="xs"
               ></CustomButton>
 
               <Link to={`/centersPut/edit/${center._id}`} key={center._id}>
@@ -63,6 +69,9 @@ const CentersDetail = () => {
                       className="papelera"
                     ></img>
                   }
+                  buttonTypeClass="normal custom"
+                  buttonHeight="50px"
+                  buttonWidth="xs"
                 />
               </Link>
             </>

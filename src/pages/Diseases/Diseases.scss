@@ -6,7 +6,7 @@
   transform: translate(0%, 0%);
   width: 100%;
   max-width: 95%;
-  height: 40%;
+  height: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,7 +20,11 @@
   margin: 0 auto;
   gap: 20px;
   // background-color: red;
-
+  .loading-pic{
+    height: 10vh;
+    width: 20vw;
+    
+  }
   .diseases-box-eachCard {
     display: block;
     overflow: hidden;
@@ -30,7 +34,7 @@
     margin-bottom: 20px;
     padding: 3%;
     color: white;
-    height: 1100px;
+    // height: 150vh;
     width: 500px;
     background: rgba(27, 33, 62, 0.242);
     box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.153);

@@ -31,15 +31,20 @@ const Diseases = () => {
       {isAdmin && (
         <div>
           <NavLink to={"/diseasesCreate"}>
-            <CustomButton text="Añadir Nueva Enfermedad"></CustomButton>
+            <CustomButton
+              text="Añadir Nueva Enfermedad"
+              buttonTypeClass="normal custom"
+              buttonHeight="60px"
+              buttonWidth="xl"
+            ></CustomButton>
           </NavLink>
         </div>
       )}
       {isLoading ? (
-        <img
-          src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
-          alt="loading"
-        />
+            <img className="loading-pic"
+            src="https://cifras.unidadvictimas.gov.co/Cifras/images/loaderColores.gif"
+            alt="loading"
+          />
       ) : !error ? (
         diseases.map((disease) => {
           return (
@@ -65,6 +70,8 @@ const Diseases = () => {
                     text="Eliminar"
                     buttonTypeClass="delete custom"
                     onClick={() => toDeleteDiseases(disease._id)}
+                    buttonHeight="60px"
+                    buttonWidth="xl"
                   ></CustomButton>
                   {/* <button onClick={() => toDeleteDiseases(disease._id)}>
                     Eliminar
@@ -79,8 +86,8 @@ const Diseases = () => {
                     <CustomButton
                       text="Editar"
                       buttonTypeClass="normal custom"
-                      buttonHeight="100px"
-                      size="xl"
+                      buttonHeight="60px"
+                      buttonWidth="xl"
                     ></CustomButton>
                   </Link>
                 </>

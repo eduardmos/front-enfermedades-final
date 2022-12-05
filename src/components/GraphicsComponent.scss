@@ -2,4 +2,13 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  opacity: 1;
+  height: 11vh;
+  background-color:  rgba(27, 33, 62, 0.428);
+  box-shadow: 0 2px 10px 0 rgba(25, 23, 26, 0.75);
+  
+}
+
+.general-graphic{
+  padding-top: 1em;
 }

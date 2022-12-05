@@ -16,7 +16,13 @@ const Logout = () => {
     //   Log Out
     // </button>
 
-    <CustomButton funcion={logOut} text="Log Out" />
+    <CustomButton
+      buttonFunction={logOut}
+      text="Log Out"
+      buttonTypeClass="normal custom"
+      buttonHeight="60px"
+      buttonWidth="l"
+    />
   );
 };
 
