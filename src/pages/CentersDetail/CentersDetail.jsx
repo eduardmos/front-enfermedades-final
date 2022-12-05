@@ -38,12 +38,14 @@ const CentersDetail = () => {
         />
       ) : !error ? (
         <div className="center-box" key={center._id}>
-          <h1>{center.name}</h1>
-          <img src={center.img} alt="imagen"></img>
-          <p>{center.description}</p>
+        <img src={center.img} alt="imagen"></img>
+          <h1 className="centerDetailsname">{center.name}</h1>
+          <p className="centerDetaildescription">{center.description}</p>
+          <div className="boxDateDetails">
           <p>{center.ubication}</p>
           <p>Número de Teléfono{center.number}</p>
           <p>Horario {center.schedule}</p>
+          </div>
           {isAdmin && (
             <>
               <CustomButton

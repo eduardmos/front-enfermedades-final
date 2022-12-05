@@ -1,5 +1,5 @@
 .first-center-box {
-  padding-top: 20px;
+  padding-top: -10%;
   display: flex;
   justify-content: center;
 
@@ -11,17 +11,36 @@
   .center-box {
     background: rgba(27, 33, 62, 0.242);
   box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
-  margin: 1.0em;
   border-radius: 2em;
   color: white;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  
+  padding-bottom: 20%;
+  width: 80%;
   
 
 
-    h1 {
-      font-size: 20px;
+    .centerDetailsname {
+      padding-top: 5%;
+      font-size: 40px;
+      text-align: initial;
+      padding-left: 10%;
+      padding-bottom: 3%;
     }
+
+    .centerDetaildescription{
+      text-align: initial;
+      padding-left: 10%;
+      padding-bottom: 3%;
+      padding-right: 10%;
+    }
+
+    .boxDateDetails{
+      background-color: rgba(248, 23, 23, 0.383);
+      width: 40%;
+      border-radius: 2em;
+      padding: 2%;
+    }
+    
   }
 }
 
