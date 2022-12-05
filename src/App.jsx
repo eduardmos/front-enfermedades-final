@@ -20,7 +20,10 @@ import CentersDetails from "./pages/CentersDetail/CentersDetail";
 import CentersPut from "./pages/CentersPut/CentersPut";
 import CentersCreate from "./pages/CentersCreate/CentersCreate";
 import GraphicsPage from "./pages/Graphics/GraphicsPage";
-import Footer from "./components/Footer/Footer";
+// import GraphicAlzheimer from "./pages/Graphics/GraphicAlzheimer/GraphicAlzheimer";
+// import GraphicELA from "./pages/Graphics/GraphicELA/GraphicELA";
+// import GraphicEsclerosis from "./pages/Graphics/GraphicEsclerosis/GraphicEsclerosis";
+// import GraphicParkinson from "./pages/Graphics/GraphicParkinson copy 3/GraphicParkinson";
 
 function App() {
   const dispatch = useDispatch();
@@ -51,9 +54,12 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="login" element={<Login />} />
           <Route path="aboutus" element={<AboutUs />} />
+          {/* <Route path="graphicsAlzheimer" element={<GraphicAlzheimer />} />
+          <Route path="graphicsEsclerosis" element={<GraphicEsclerosis />} />
+          <Route path="graphicsEla" element={<GraphicELA />} />
+          <Route path="graphicsParkinson" element={<GraphicParkinson />} /> */}
         </Routes>
       </main>
-      <Footer />
     </div>
   );
 }

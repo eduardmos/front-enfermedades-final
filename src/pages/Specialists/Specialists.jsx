@@ -35,10 +35,10 @@ const Specialists = () => {
       )}
       <div className="search-specialist">
         <label>
-          <h6 className="input-text">
+          <h2 className="input-text">
             Encuentra al profesional que más se adapte a ti
-          </h6>
-          <div className="search-center">
+          </h2>
+          <div className="search-specialist-select">
             <select
               type="text"
               defaultValue={"Default"}
@@ -67,13 +67,18 @@ const Specialists = () => {
           .map((specialist) => {
             return (
               <div className="specialist-box-eachCard" key={specialist._id}>
-                <h1>{specialist.name}</h1>
-                <img src={specialist.img} alt="specialistImg"></img>
-                <p>{specialist.specialistType}</p>
-                {/* <button onClick={() => watchMore(specialist._id)}>
+                <img
+                  className="imgCardSpecialist"
+                  src={specialist.img}
+                  alt="specialistImg"
+                ></img>
+                <div className="boxInfoCard">
+                  <p>{specialist.specialistType}</p>
+                  {/* <button onClick={() => watchMore(specialist._id)}>
                 Detalles
               </button> */}
-                <div className="button-specialist">
+                  <h1>{specialist.name}</h1>
+                  <div className="button-specialist"></div>
                   <Link
                     to={`/specialists/${specialist._id}`}
                     key={specialist._id}

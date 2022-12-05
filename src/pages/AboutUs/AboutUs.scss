@@ -9,9 +9,13 @@
 
   .about-project {
     width: 90vw;
-    height: 67vh;
+    min-height: 52vh;
     line-height: 20px;
-    border: 3px solid #414445;
+    background: rgba(27, 33, 62, 0.242);
+    box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
+    margin: 5% auto;
+    padding: 1em;
+    border-radius: 1.563em;
     h1 {
       padding-top: 5%;
       font-size: 150%;
@@ -21,6 +25,7 @@
       line-height: 40px;
     }
   }
+
   .about-us-box {
     h3 {
       padding-top: 15px;

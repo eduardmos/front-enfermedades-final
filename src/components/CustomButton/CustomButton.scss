@@ -1,12 +1,12 @@
 // bn632-hover ----------- bn632-hover bn24
 .normal {
   width: 160px;
+  height: 55px;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
   margin: 20px;
-  height: 55px;
   text-align: center;
   border: none;
   background-size: 300% 100%;
@@ -41,12 +41,12 @@
 
 .delete {
   width: 160px;
+  height: 55px;
   font-size: 16px;
   font-weight: 600;
   color: #fff;
   cursor: pointer;
   margin: 20px;
-  height: 55px;
   text-align: center;
   border: none;
   background-size: 300% 100%;
@@ -69,6 +69,12 @@
 }
 
 .delete.custom {
-  background-image: linear-gradient(to right, #6253e1, #852d91, red, red);
+  background-image: linear-gradient(
+    to right,
+    #6253e1,
+    #852d91,
+    #f95959,
+    #f95959
+  );
   box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
 }

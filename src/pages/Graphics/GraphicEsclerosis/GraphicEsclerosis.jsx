@@ -22,13 +22,12 @@ const GraphicEsclerosis = () => {
     datasets: [
       {
         label: "Afectados",
-
         backgroundColor: "black",
         borderColor: "green",
         borderWith: 1,
         hoverBackgroundColor: "blue",
         hoverBackground: "green",
-        data: [530, 2010, , 3339, 3050, 3270, 3970],
+        data: [530, 2010, 3339, 3050, 3270, 3970],
       },
     ],
   };

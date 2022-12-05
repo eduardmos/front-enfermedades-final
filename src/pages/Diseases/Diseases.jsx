@@ -79,6 +79,8 @@ const Diseases = () => {
                     <CustomButton
                       text="Editar"
                       buttonTypeClass="normal custom"
+                      buttonHeight="100px"
+                      size="xl"
                     ></CustomButton>
                   </Link>
                 </>
