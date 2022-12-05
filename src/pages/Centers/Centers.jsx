@@ -35,6 +35,7 @@ const Centers = () => {
       </div>
       {isLoading ? (
         <img
+          className="imgCentersCard"
           src="https://i.pinimg.com/originals/3d/6a/a9/3d6aa9082f3c9e285df9970dc7b762ac.gif"
           alt="loading"
         />
@@ -46,8 +47,8 @@ const Centers = () => {
           .map((center) => {
             return (
               <div className="center-box-eachCard" key={center._id}>
-                <h1>{center.name}</h1>
                 <img src={center.img} alt="center-img"></img>
+                <h1>{center.name}</h1>
                 <p>{center.ubication}</p>
                 <div className="button-center">
                   <Link to={`/centers/${center._id}`} key={center._id}>

@@ -1,5 +1,5 @@
 import React from "react";
-
+import "../../components/GraphicsComponent";
 import { Pages } from "../../components/GraphicsComponent";
 
 import "./GraphicsPage.scss";
@@ -8,13 +8,13 @@ const GraphicsPage = (props) => {
   const { setCurrentPage } = props;
 
   return (
-    <section className="graphics">
-      {Object.keys(Pages).map((page) => {
+    <section className="general-container">
+      {Object.values(Pages).map((page) => {
         return (
           <button
+            key={page}
             className="pages"
             onClick={() => {
-              console.log(setCurrentPage);
               setCurrentPage(page);
             }}
           >

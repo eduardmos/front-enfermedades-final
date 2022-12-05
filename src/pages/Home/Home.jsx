@@ -15,8 +15,8 @@ const Home = () => {
     <div className="container-general">
       <div className="containerimg">
         <h2 className="textHomeInitial">
-          somos un punto de informacion y de encuentro entre especilistas y
-          pacientes en enfermedades neurodegenerativas
+          Somos un punto de información y de encuentro entre especilistas y
+          pacientes con enfermedades neurodegenerativas
         </h2>
         {!user && (
           <>

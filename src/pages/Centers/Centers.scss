@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 100%;
+  width: 50%;
 
   .search-center {
     width: 100%;
@@ -15,22 +15,25 @@
     // text-transform: uppercase;
     font-size: 17px;
     height: 20em;
-    width: 100%;
-    background-color: #455d7a;
-    border: 1px solid #233142;
+    position: relative;
+    background-color: rgba(27, 33, 62, 0.242);
+    box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.196);
     color: white;
     margin: 1em;
-    border-radius: 5px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
 
     h1 {
       font-size: 20px;
     }
 
-    img {
-      width: 100%;
-      height: 40%;
+    .imgCentersCard {
+      width: 20%;
+      height: 100%;
       object-fit: cover;
       object-position: unset;
+      border-radius: 25px;
     }
   }
 

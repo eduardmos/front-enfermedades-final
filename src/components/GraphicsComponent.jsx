@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import "./GraphicsComponent.scss";
 import GraphicAlzheimer from "../pages/Graphics/GraphicAlzheimer/GraphicAlzheimer";
 import GraphicELA from "../pages/Graphics/GraphicELA/GraphicELA";
 import GraphicEsclerosis from "../pages/Graphics/GraphicEsclerosis/GraphicEsclerosis";
@@ -16,19 +17,21 @@ export const Pages = {
 const GraphicsComponent = () => {
   const [currentPage, setCurrentPage] = useState(Pages.Alzheimer);
   console.log(setCurrentPage);
-  let currentComponent = null;
-  if (currentPage === Pages.Alzheimer) currentComponent = <GraphicAlzheimer />;
-  else if (currentPage === Pages.EsclerosisMultiple)
-    currentComponent = <GraphicEsclerosis />;
-  else if (currentPage === Pages.EslcerosisLateral)
-    currentComponent = <GraphicELA />;
-  else if (currentPage === Pages.Parkinson)
-    currentComponent = <GraphicParkinson />;
+  const renderGraphic = () => {
+    if (currentPage === Pages.Alzheimer) return <GraphicAlzheimer />;
+    else if (currentPage === Pages.EsclerosisMultiple)
+      return <GraphicEsclerosis />;
+    else if (currentPage === Pages.EslcerosisLateral) return <GraphicELA />;
+    else if (currentPage === Pages.Parkinson) return <GraphicParkinson />;
+  };
 
+  console.log(currentPage);
   return (
     <div>
-      <GraphicsPage setCurrentPage={setCurrentPage} />
-      <section className="general-container">{currentComponent}</section>
+      <section className="general-container-graphics">
+        {renderGraphic()}
+        <GraphicsPage setCurrentPage={setCurrentPage} />
+      </section>
     </div>
   );
 };

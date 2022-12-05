@@ -12,8 +12,10 @@ const CustomButton = ({
     <button
       className={buttonTypeClass}
       onClick={funcion}
-      height={buttonHeight}
-      width={size === "xl" ? "300px" : size === "l" ? "200px" : "100px"}
+      style={{
+        height: buttonHeight,
+        width: size === "xl" ? "300px" : size === "l" ? "200px" : "100px",
+      }}
     >
       {text}
     </button>
