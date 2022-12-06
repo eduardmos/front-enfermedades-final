@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../redux/auth/auth.actions";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const Login = () => {
   const {
@@ -21,46 +22,52 @@ const Login = () => {
 
   return (
     <div className="form-login">
-    <form className="form--box" onSubmit={handleSubmit(login)}>
-      <label>
-        <h6>Email</h6>
-        <input
-          type="text"
-          name="email"
-          {...register("email", {
-            required: "Introduce un email, por favor",
-            minLength: {
-              value: 2,
-              message: "El email tiene que ser más largo",
-            },
-            pattern: {
-              value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-              message: "Introduce un email con formato válido",
-            },
-          })}
-        />
-      </label>
-      {errors.email ? (
-        <>
-          {errors.email.type === "required" && <p>{errors.email.message}</p>}
-          {errors.email.type === "minLength" && <p>{errors.email.message}</p>}
-          {errors.email.type === "pattern" && <p>{errors.email.message}</p>}
-        </>
-      ) : null}
-      <label>
-        <h6>Password</h6>
-        <input
-          type="password"
-          name="password"
-          {...register("password", {
-            required: "El password tiene que existir",
-          })}
-        />
-      </label>
-      {errors.password ? <p>El password no es correcto</p> : null}
+      <form className="form--box" onSubmit={handleSubmit(login)}>
+        <label>
+          <h6>Email</h6>
+          <input
+            type="text"
+            name="email"
+            {...register("email", {
+              required: "Introduce un email, por favor",
+              minLength: {
+                value: 2,
+                message: "El email tiene que ser más largo",
+              },
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
+                message: "Introduce un email con formato válido",
+              },
+            })}
+          />
+        </label>
+        {errors.email ? (
+          <>
+            {errors.email.type === "required" && <p>{errors.email.message}</p>}
+            {errors.email.type === "minLength" && <p>{errors.email.message}</p>}
+            {errors.email.type === "pattern" && <p>{errors.email.message}</p>}
+          </>
+        ) : null}
+        <label>
+          <h6>Password</h6>
+          <input
+            type="password"
+            name="password"
+            {...register("password", {
+              required: "El password tiene que existir",
+            })}
+          />
+        </label>
+        {errors.password ? <p>El password no es correcto</p> : null}
 
-      <button disabled={!isValid}>Enviar</button>
-    </form>
+        <CustomButton
+          disabled={!isValid}
+          text="Enviar"
+          buttonTypeClass="type1 custom"
+          buttonHeight="60px"
+          buttonWidth="l"
+        ></CustomButton>
+      </form>
     </div>
   );
 };

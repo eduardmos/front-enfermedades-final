@@ -2,20 +2,20 @@
 
 .form-login {
   background: rgba(27, 33, 62, 0.242);
-  box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.196);
-  // backdrop-filter: blur(0.1px);
-  // mix-blend-mode:multiply;
-  // border: 1px solid rgba(67, 61, 91, 0.006);
+  box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
   border-radius: 1.563em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 30vh;
-  max-width: 62.5em;
+  width: 80%;
+  max-width: 1000px;
   margin: 5% auto;
   padding: 1em;
+  border: none;
+  color: white;
   h2 {
     text-align: center;
+    padding: 0.3em;
   }
   .form--box {
     display: flex;
@@ -24,38 +24,16 @@
     width: 100%;
     label {
       width: 50%;
-      padding: 1.5em;
-      color: #ffffff;
+      padding: 0.4em;
+
       input {
         display: flex;
         width: 100%;
-        height: 1.25em;
+        height: 20px;
         padding: 0.2em;
         border-radius: 0.9em;
         border: none;
       }
-    }
-  }
-  button {
-    margin: 1.25em;
-    width: 20%;
-    height: 2.5em;
-    border-radius: 1.25em;
-    border: none;
-    background: rgba(255, 255, 255, 0.6);
-    position: sticky;
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    color: #080e21;
-
-    &:hover {
-      transition: all 0.3s;
-      border-radius: 0.75em;
-      padding: 0.4em;
-      background: rgba(18, 18, 18, 0.168);
-      color: white;
     }
   }
 }

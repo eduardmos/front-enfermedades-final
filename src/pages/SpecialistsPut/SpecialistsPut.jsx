@@ -6,6 +6,7 @@ import {
   getByIdSpecialists,
   putSpecialists,
 } from "../../redux/specialists/specialists.functions";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const SpecialistsPut = () => {
   const { register, handleSubmit } = useForm();
@@ -106,7 +107,12 @@ const SpecialistsPut = () => {
               <option>Noche</option>
             </select>
           </label>
-          <button>Modificar</button>
+          <CustomButton
+            text="Modificar"
+            buttonTypeClass="type1 custom"
+            buttonHeight="60px"
+            buttonWidth="l"
+          ></CustomButton>
         </form>
       )}
     </div>

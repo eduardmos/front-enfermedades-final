@@ -3,7 +3,6 @@ import { API } from "../../shared/services/api";
 export const newUser = (formdata, navigate) => async (dispatch) => {
   dispatch({ type: "register_user_start" });
   try {
-    console.log("Por encima de la ruta a la API");
     const result = await API.post("users/create", formdata);
     dispatch({ type: "register_user_ok" });
     // console.log(result);

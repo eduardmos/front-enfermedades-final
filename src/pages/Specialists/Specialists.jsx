@@ -29,9 +29,12 @@ const Specialists = () => {
       {isAdmin && (
         <div className="button-Specialist-Create">
           <NavLink to={"/specialistsCreate"}>
-            <CustomButton text="CREAR ESPECIALISTA" buttonTypeClass="normal custom"
-                  buttonHeight="50px"
-                  buttonWidth="xl" />
+            <CustomButton
+              text="CREAR ESPECIALISTA"
+              buttonTypeClass="normal custom"
+              buttonHeight="50px"
+              buttonWidth="xl"
+            />
           </NavLink>
         </div>
       )}
@@ -47,17 +50,18 @@ const Specialists = () => {
               className="button-search-on"
               onChange={(e) => setQuery(e.target.value.toLowerCase())}
             >
-              <option>Fisioterapeuta</option>
-              <option>Auxiliar de Enfermeria</option>
-              <option>Psicologo Especializado</option>
-              <option>Terapeuta</option>
-              <option>Logopeda</option>
+              <option>fisioterapeuta</option>
+              <option>auxiliar de Enfermeria</option>
+              <option>psicologo Especializado</option>
+              <option>terapeuta</option>
+              <option>logopeda</option>
             </select>
           </div>
         </label>
       </div>
       {isLoading ? (
-        <img className="loading-pic"
+        <img
+          className="loading-pic"
           src="https://cifras.unidadvictimas.gov.co/Cifras/images/loaderColores.gif"
           alt="loading"
         />
@@ -76,9 +80,7 @@ const Specialists = () => {
                 ></img>
                 <div className="boxInfoCard">
                   <p>{specialist.specialistType}</p>
-                  {/* <button onClick={() => watchMore(specialist._id)}>
-                Detalles
-              </button> */}
+
                   <h1>{specialist.name}</h1>
                   <div className="button-specialist"></div>
                   <Link

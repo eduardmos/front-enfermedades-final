@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { postCenters } from "../../redux/centers/centers.functions";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const CentersCreate = () => {
   const { register, handleSubmit } = useForm();
@@ -71,7 +72,12 @@ const CentersCreate = () => {
           <input type="text" name="schedule" {...register("schedule")}></input>
         </label>
 
-        <button>Añadir</button>
+        <CustomButton
+          text="Añadir"
+          buttonTypeClass="type1 custom"
+          buttonHeight="60px"
+          buttonWidth="l"
+        ></CustomButton>
       </form>
     </div>
   );

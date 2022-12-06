@@ -15,7 +15,7 @@ const GraphicAlzheimer = () => {
     ],
     datasets: [
       {
-        label: "Afectados",
+        label: "Afectados Actualidad",
 
         backgroundColor: "#1D2233",
         borderColor: "green",
@@ -27,17 +27,8 @@ const GraphicAlzheimer = () => {
     ],
   };
 
-
-
   const data3 = {
-    labels: [
-      "2015",
-      "2016",
-      "2017",
-      "2018",
-      "2019",
-      "2020",
-    ],
+    labels: ["2015", "2016", "2017", "2018", "2019", "2020"],
     datasets: [
       {
         label: "Mortalidad",
@@ -45,13 +36,12 @@ const GraphicAlzheimer = () => {
         backgroundColor: "#1D2233",
         borderColor: "green",
         borderWith: 1,
-        hoverBackgroundColor:  "#793cae",
+        hoverBackgroundColor: "#793cae",
         hoverBackground: "green",
         data: [8973, 9050, 9923, 10045, 11006, 10345, 10876],
       },
     ],
   };
-
 
   const opciones = {
     maintainAspectRadio: false,
@@ -61,15 +51,13 @@ const GraphicAlzheimer = () => {
   return (
     <div className="general-graphic">
       <h2>ALZHEIMER</h2>
-      <div>  
+      <div>
         <Bar data={data} options={opciones} />
-        <div className="bottom--lit"> <Bar data={data3} options={opciones} /></div>
-        
+        <div className="bottom--lit">
+          {" "}
+          <Bar data={data3} options={opciones} />
         </div>
-     
-       
-       
-      
+      </div>
     </div>
   );
 };

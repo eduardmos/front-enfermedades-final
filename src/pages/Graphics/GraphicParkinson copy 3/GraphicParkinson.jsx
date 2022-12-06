@@ -15,28 +15,20 @@ const GraphicParkinson = () => {
     ],
     datasets: [
       {
-        label: "Afectados",
+        label: "Afectados Actualidad",
 
         backgroundColor: "#1D2233",
         borderColor: "green",
         borderWith: 1,
-        hoverBackgroundColor:  "#793cae",
+        hoverBackgroundColor: "#793cae",
         hoverBackground: "green",
         data: [1100, 8500, 8580, 3440, 8220, 14900, 29400],
       },
     ],
   };
 
-
   const data3 = {
-    labels: [
-      "2016",
-      "2017",
-      "2018",
-      "2019",
-      "2020",
-      "2021",
-    ],
+    labels: ["2016", "2017", "2018", "2019", "2020", "2021"],
     datasets: [
       {
         label: "Mortalidad",
@@ -51,30 +43,21 @@ const GraphicParkinson = () => {
     ],
   };
 
-
   const opciones = {
     maintainAspectRadio: false,
-   
   };
 
   return (
     <div className="general-graphic">
       <h2>PARKINSON</h2>
-     
-    <div>     
-      <Bar data={data} options={opciones} />
-    </div>
-   <div className="bottom--lit">  
 
+      <div>
+        <Bar data={data} options={opciones} />
+      </div>
+      <div className="bottom--lit">
         <Bar data={data3} options={opciones} />
-       
-    
+      </div>
     </div>
-        
-  </div>
-    
-
-    
   );
 };
 

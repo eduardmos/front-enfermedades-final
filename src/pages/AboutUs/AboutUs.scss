@@ -1,44 +1,62 @@
-.aboutus-box {
-  padding-top: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+// .aboutus-box {
+//   padding-top: 15px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   width: 100%;
+
+.about-project {
   width: 100%;
-
-  .about-project {
-    width: 80vw;
-    line-height: 20px;
-    background: rgba(27, 33, 62, 0.242);
-    box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
-    margin: 5% auto;
-    padding: 1em;
-    border-radius: 1.563em;
-
+  height: 75vh;
+  background: #1d2233;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: none;
+  border-top-right-radius: none;
+  border-bottom-right-radius: 6em;
+  border-bottom-left-radius: 6em;
+  .twobox {
+    padding: 3em;
     h1 {
-      padding-top: 5%;
-      padding-bottom: 5%;
       font-size: 150%;
+      color: white;
     }
 
     p {
       font-size: 18px;
       line-height: 40px;
+      color: white;
+      padding-right: 6%;
     }
   }
+}
 
-  .about-us-box {
-    width: 30vw;
-    h3 {
-      padding-top: 15px;
-      padding-bottom: 20px;
-    }
-    .aboutus-box-eachCard {
-      padding-bottom: 20px;
-      img {
-        padding-left: 10px;
-        width: 10%;
-      }
+.about-us-box {
+  width: 30vw;
+  h3 {
+    padding-top: 15px;
+    padding-bottom: 20px;
+  }
+  .aboutus-box-eachCard {
+    padding-bottom: 20px;
+    img {
+      padding-left: 10px;
+      width: 10%;
     }
   }
+}
+
+.imagen-nosotros {
+  width: 350px;
+  border-radius: 2em;
+}
+
+.container-img-nos {
+  width: 50%;
 }

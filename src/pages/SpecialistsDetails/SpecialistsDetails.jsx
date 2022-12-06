@@ -63,7 +63,7 @@ const SpecialistsDetails = () => {
               {isAdmin && (
                 <>
                   <CustomButton
-                    funcion={() => deleteSpecialist(specialist._id)}
+                    buttonFunction={() => deleteSpecialist(specialist._id)}
                     text={
                       <img
                         src="https://cdn-icons-png.flaticon.com/512/58/58326.png"

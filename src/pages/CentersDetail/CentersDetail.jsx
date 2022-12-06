@@ -38,18 +38,18 @@ const CentersDetail = () => {
         />
       ) : !error ? (
         <div className="center-box" key={center._id}>
-        <img src={center.img} alt="imagen"></img>
+          <img src={center.img} alt="imagen"></img>
           <h1 className="centerDetailsname">{center.name}</h1>
           <p className="centerDetaildescription">{center.description}</p>
           <div className="boxDateDetails">
-          <p>{center.ubication}</p>
-          <p>Número de Teléfono{center.number}</p>
-          <p>Horario {center.schedule}</p>
+            <p>📍 {center.ubication}</p>
+            <p>📞 {center.number}</p>
+            <p>🕐 {center.schedule}</p>
           </div>
           {isAdmin && (
             <>
               <CustomButton
-                funcion={() => deleteCenter(center._id)}
+                buttonFunction={() => deleteCenter(center._id)}
                 text={
                   <img
                     src="https://cdn-icons-png.flaticon.com/512/58/58326.png"

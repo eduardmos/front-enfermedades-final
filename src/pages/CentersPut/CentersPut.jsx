@@ -7,6 +7,7 @@ import {
   getByIdCenters,
   putCenters,
 } from "../../redux/centers/centers.functions";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const CentersPut = () => {
   const { register, handleSubmit } = useForm();
@@ -38,7 +39,7 @@ const CentersPut = () => {
   };
 
   return (
-    <div className="form-centers-put">
+    <div className="form-put-centers">
       <h2>Edita el Centro</h2>
       {center && (
         <form className="form--box" onSubmit={handleSubmit(editCenters)}>
@@ -101,7 +102,12 @@ const CentersPut = () => {
             ></input>
           </label>
 
-          <button>Modificar</button>
+          <CustomButton
+            text="Modificar"
+            buttonTypeClass="type1 custom"
+            buttonHeight="60px"
+            buttonWidth="l"
+          ></CustomButton>
         </form>
       )}
     </div>

@@ -3,8 +3,17 @@
   flex-direction: column;
   background-color: #1d2233;
   color: white;
-  height: 30em;
+  height: 40em;
   justify-content: space-around;
+
+  .footer-box-title {
+    color: white;
+  }
+
+  .footer-box-content {
+    padding-top: 1em;
+    color: rgb(143, 143, 143);
+  }
 }
 
 button {

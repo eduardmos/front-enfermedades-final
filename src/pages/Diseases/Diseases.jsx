@@ -41,10 +41,11 @@ const Diseases = () => {
         </div>
       )}
       {isLoading ? (
-            <img className="loading-pic"
-            src="https://cifras.unidadvictimas.gov.co/Cifras/images/loaderColores.gif"
-            alt="loading"
-          />
+        <img
+          className="loading-pic"
+          src="https://cifras.unidadvictimas.gov.co/Cifras/images/loaderColores.gif"
+          alt="loading"
+        />
       ) : !error ? (
         diseases.map((disease) => {
           return (
@@ -69,7 +70,7 @@ const Diseases = () => {
                   <CustomButton
                     text="Eliminar"
                     buttonTypeClass="delete custom"
-                    onClick={() => toDeleteDiseases(disease._id)}
+                    buttonFunction={() => toDeleteDiseases(disease._id)}
                     buttonHeight="60px"
                     buttonWidth="xl"
                   ></CustomButton>

@@ -1,9 +1,10 @@
 import React from "react";
-import "./SpecialistsCreate.scss"
+import "./SpecialistsCreate.scss";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { postSpecialists } from "../../redux/specialists/specialists.functions";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const SpecialistsCreate = () => {
   const { register, handleSubmit } = useForm();
@@ -27,7 +28,7 @@ const SpecialistsCreate = () => {
   };
 
   return (
-    <div className="form-create-specialists">
+    <div className="form-specialists-create">
       <h2>Añadir un nuevo especialista</h2>
       <form className="form--box" onSubmit={handleSubmit(createSpecialists)}>
         <label>
@@ -69,7 +70,12 @@ const SpecialistsCreate = () => {
             <option>Noche</option>
           </select>
         </label>
-        <button>Añadir</button>
+        <CustomButton
+          text="Añadir"
+          buttonTypeClass="type1 custom"
+          buttonHeight="60px"
+          buttonWidth="l"
+        ></CustomButton>
       </form>
     </div>
   );

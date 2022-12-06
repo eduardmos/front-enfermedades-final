@@ -8,6 +8,7 @@ import {
   getByIdDiseases,
   putDiseases,
 } from "../../redux/diseases/diseases.functions";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const DiseasesPut = () => {
   const { register, handleSubmit } = useForm();
@@ -93,7 +94,12 @@ const DiseasesPut = () => {
             ></input>
           </label>
 
-          <button>Modificar</button>
+          <CustomButton
+            text="Modificar"
+            buttonTypeClass="type1 custom"
+            buttonHeight="60px"
+            buttonWidth="l"
+          ></CustomButton>
         </form>
       )}
     </div>

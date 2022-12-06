@@ -1,7 +1,8 @@
 .form-specialists-put {
-  background-color: #25dd8e;
+  background-color: rgba(27, 33, 62, 0.242);
+  box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
   border: 1px solid #414445;
-  border-radius: 5px;
+  border-radius: 1.563em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +13,7 @@
   h2 {
     text-align: center;
     padding: 0.3em;
-    color: #2a2c3a;
+    color: white;
   }
   .form--box {
     display: flex;
@@ -22,30 +23,13 @@
     label {
       width: 50%;
       padding: 0.4em;
-      color: #2a2c3a;
+      color: white;
       input {
         display: flex;
         width: 100%;
         height: 20px;
         padding: 0.2em;
       }
-    }
-  }
-  button {
-    margin-top: 2em;
-    width: fit-content;
-    background: transparent;
-    border: none;
-    text-transform: uppercase;
-    color: #2a2c3a;
-    padding-bottom: 0.5em;
-
-    cursor: pointer;
-
-    &:hover {
-      transition: all 0.3s;
-      border-radius: 12px;
-      padding: 0.4em;
     }
   }
 }

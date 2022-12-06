@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { postDiseases } from "../../redux/diseases/diseases.functions";
+import CustomButton from "../../components/CustomButton/CustomButton";
 
 const DiseasesCreate = () => {
   const { register, handleSubmit } = useForm();
@@ -67,7 +68,12 @@ const DiseasesCreate = () => {
           ></input>
         </label>
 
-        <button>Añadir</button>
+        <CustomButton
+          text="Añadir"
+          buttonTypeClass="type1 custom"
+          buttonHeight="60px"
+          buttonWidth="l"
+        ></CustomButton>
       </form>
     </div>
   );
