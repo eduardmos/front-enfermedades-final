@@ -6,13 +6,11 @@
   height: 100%;
   width: 100%;
   color: #e3e3e3;
- 
 
   .loading-pic {
     height: 10vh;
     width: 20vw;
   }
-  
 
   .specialist-box {
     color: white;
@@ -26,30 +24,22 @@
     border-radius: 2em;
     margin: 3.5em;
     padding: 3em;
-   
-    .imgdivdetails{
 
+    .imgdivdetails {
       width: 300px;
       height: 300px;
       padding: 0%;
       padding-bottom: 0;
-      
 
       .imgSpecialist {
-     
-    
-     object-fit: cover;
-     object-position: center center;
+        object-fit: cover;
+        object-position: center center;
         width: 100%;
         border-radius: 2em;
         background-image: linear-gradient(60deg, #2aaa8a, #4169e1);
         padding: 5px;
-       
       }
     }
-   
-    
-  
 
     .specialist-admin-buttons {
       display: flex;
