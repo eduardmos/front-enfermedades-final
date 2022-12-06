@@ -7,15 +7,14 @@ const Nosotros = () => {
       <div className="about-project">
         <div className="container-img-nos">
           <img
-            src="https://res.cloudinary.com/dt1kuzdty/image/upload/v1670066452/proyecto-diseases/tlxthokcza8jci7ctsgu.jpg"
-            alt="image"
-            className="imagen-nosotros"
+            src="https://dbdzm869oupei.cloudfront.net/img/sticker/preview/30776.png"
+            alt="cerebro"
           ></img>
         </div>
 
-        <div>
-          <h1> SimpleMente </h1>
-          <p>
+        <div className="twobox">
+          <h1 className="titleAbout"> SimpleMente </h1>
+          <p className="descripAbout">
             Este proyecto nace para facilitar información y orientación a las
             personas con síntomas de alzheimer y otras demencias, así como para
             sus familiares. Fomentamos la investigación de patologías
