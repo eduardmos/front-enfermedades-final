@@ -45,13 +45,14 @@ const SpecialistsDetails = () => {
         />
       ) : !error ? (
         <div className="specialist-box">
-          <div>
+          <div className="imgdivdetails">
             <img
+              className="imgSpecialist"
               src={specialist.img}
               alt="imagen"
-              className="imgSpecialist"
+              
             ></img>
-          </div>
+         </div>
           <div key={specialist._id}>
             <h1> {specialist.name}</h1>
             <h1>{specialist.surname}</h1>

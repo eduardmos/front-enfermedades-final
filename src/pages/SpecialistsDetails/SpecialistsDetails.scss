@@ -1,37 +1,62 @@
 .first-box-specialist {
-  background: rgba(27, 33, 62, 0.242);
-  box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
-  margin: 1em;
-  border-radius: 2em;
-  color: white;
-  padding-top: 10%;
-  padding-bottom: 10%;
-  height: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: #e3e3e3;
+ 
 
   .loading-pic {
     height: 10vh;
     width: 20vw;
   }
+  
 
   .specialist-box {
+    color: white;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    height: 18em;
+    width: 50em;
+    background: rgba(27, 33, 62, 0.242);
+    box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.196);
+    border-radius: 2em;
+    margin: 3.5em;
+    padding: 3em;
+   
+    .imgdivdetails{
 
-    .imgSpecialist {
-      margin-left: 1em;
-      border-radius: 50%;
-      background-image: linear-gradient(60deg, #2aaa8a, #4169e1);
-      padding: 3px;
-      margin-top: -80px;
-      width: 35vw;
+      width: 300px;
+      height: 300px;
+      padding: 0%;
+      padding-bottom: 0;
+      
+
+      .imgSpecialist {
+     
+    
+     object-fit: cover;
+     object-position: center center;
+        width: 100%;
+        border-radius: 2em;
+        background-image: linear-gradient(60deg, #2aaa8a, #4169e1);
+        padding: 5px;
+       
+      }
     }
+   
+    
+  
 
     .specialist-admin-buttons {
       display: flex;
 
-      .papelera {
-        width: 3.5vw;
-      }
+      // .papelera {
+      //   width: 3.5vw;
+      // }
     }
   }
 }

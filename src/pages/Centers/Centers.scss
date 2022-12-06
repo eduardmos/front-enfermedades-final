@@ -5,6 +5,7 @@
   align-items: center;
   height: 100%;
   width: 50%;
+  margin-bottom: 5%;
   .loading-pic {
     height: 10vh;
     width: 20vw;
@@ -14,6 +15,22 @@
     height: 40px;
     padding-top: 7%;
     padding-bottom: 5%;
+    color: aliceblue;
+    ::placeholder{
+      color: aliceblue;
+    }
+
+    input{
+
+      border-radius: 2em;
+      border:none;
+      padding: 2%;
+      background-image: linear-gradient(60deg, #2aaa8a, #4169e1);
+      box-shadow: 0 4px 15px 0 rgb(25 23 26 / 75%);
+     
+      
+    }
+   
   }
   .center-box-eachCard {
     color: white;
