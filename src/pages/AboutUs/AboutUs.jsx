@@ -8,8 +8,8 @@ const Nosotros = () => {
         <div className="container-img-nos">
           <img
           className="imgprincipalabout"
-            src="https://ballestarwars.files.wordpress.com/2015/11/new-girl-2.jpg"
-            alt="cerebro"
+            src="./assets/groupImage.jpg"
+            alt="foto de grupo"
           ></img>
         </div>
 

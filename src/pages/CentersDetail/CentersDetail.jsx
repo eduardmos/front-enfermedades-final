@@ -46,38 +46,40 @@ const CentersDetail = () => {
             <p>📞 {center.number}</p>
             <p>🕐 {center.schedule}</p>
           </div>
-          {isAdmin && (
-            <>
-              <CustomButton
-                buttonFunction={() => deleteCenter(center._id)}
-                text={
-                  <img
-                    src="https://cdn-icons-png.flaticon.com/512/58/58326.png"
-                    alt="papelera"
-                    className="papelera"
-                  ></img>
-                }
-                buttonTypeClass="delete custom"
-                buttonHeight="50px"
-                buttonWidth="xs"
-              ></CustomButton>
-
-              <Link to={`/centersPut/edit/${center._id}`} key={center._id}>
+          <div>
+            {isAdmin && (
+              <>
                 <CustomButton
+                  buttonFunction={() => deleteCenter(center._id)}
                   text={
                     <img
-                      src="https://cdn-icons-png.flaticon.com/512/3597/3597088.png"
+                      src="https://cdn-icons-png.flaticon.com/512/58/58326.png"
                       alt="papelera"
                       className="papelera"
                     ></img>
                   }
-                  buttonTypeClass="normal custom"
+                  buttonTypeClass="delete custom"
                   buttonHeight="50px"
                   buttonWidth="xs"
-                />
-              </Link>
-            </>
-          )}
+                ></CustomButton>
+
+                <Link to={`/centersPut/edit/${center._id}`} key={center._id}>
+                  <CustomButton
+                    text={
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/3597/3597088.png"
+                        alt="papelera"
+                        className="papelera"
+                      ></img>
+                    }
+                    buttonTypeClass="normal custom"
+                    buttonHeight="50px"
+                    buttonWidth="xs"
+                  />
+                </Link>
+              </>
+            )}
+          </div>
         </div>
       ) : (
         <div>
