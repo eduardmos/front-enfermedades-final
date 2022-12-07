@@ -17,13 +17,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 18em;
-    width: 50em;
+    height: 30em;
+    width: 90%;
     background: rgba(27, 33, 62, 0.242);
-    box-shadow: 15px 15px 20px rgba(32, 27, 62, 0.196);
+    box-shadow: 15px 15px 20px rgb(32 27 62 / 20%);
     border-radius: 2em;
     margin: 3.5em;
-    padding: 3em;
+    padding: 1em;
 
     .imgdivdetails {
       width: 300px;
